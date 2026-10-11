@@ -1,0 +1,42 @@
+country,measure,value,unit
+New Zealand,visitors,165,thousand
+China,visitors,78,thousand
+United States of America,visitors,75,thousand
+Singapore,visitors,53,thousand
+United Kingdom,visitors,51,thousand
+India,visitors,44,thousand
+Japan,visitors,26,thousand
+Malaysia,visitors,21,thousand
+Hong Kong,visitors,16,thousand
+Korea,visitors,15,thousand
+Philippines,visitors,15,thousand
+China,nights,1849,thousand
+United Kingdom,nights,1799,thousand
+India,nights,1746,thousand
+New Zealand,nights,1289,thousand
+United States of America,nights,936,thousand
+France,nights,584,thousand
+Singapore,nights,431,thousand
+Japan,nights,405,thousand
+Malaysia,nights,385,thousand
+Korea,nights,371,thousand
+China,spend_in_aus,362361,AUD thousand
+New Zealand,spend_in_aus,311929,AUD thousand
+United Kingdom,spend_in_aus,242544,AUD thousand
+United States of America,spend_in_aus,242340,AUD thousand
+India,spend_in_aus,192110,AUD thousand
+Singapore,spend_in_aus,102035,AUD thousand
+France,spend_in_aus,73670,AUD thousand
+Japan,spend_in_aus,63522,AUD thousand
+Korea,spend_in_aus,63338,AUD thousand
+Hong Kong,spend_in_aus,54129,AUD thousand
+United States of America,total_trip_spend,554169,AUD thousand
+China,total_trip_spend,500820,AUD thousand
+United Kingdom,total_trip_spend,463745,AUD thousand
+New Zealand,total_trip_spend,455958,AUD thousand
+India,total_trip_spend,278834,AUD thousand
+Singapore,total_trip_spend,203582,AUD thousand
+France,total_trip_spend,118651,AUD thousand
+Japan,total_trip_spend,118117,AUD thousand
+Korea,total_trip_spend,93255,AUD thousand
+Germany,total_trip_spend,84999,AUD thousand

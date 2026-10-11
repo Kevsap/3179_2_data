@@ -1,0 +1,17 @@
+state_code,region,region_type,visitors_000,spend_in_state_m
+NSW,Sydney,Capital,4721,4048
+NSW,Regional NSW,Regional,2712,1800
+VIC,Melbourne,Capital,4400,3112
+VIC,Regional VIC,Regional,1475,600
+QLD,Brisbane,Capital,2878,1981
+QLD,Gold Coast,City,604,501
+QLD,Regional QLD,Regional,1757,1183
+SA,Adelaide,Capital,795,825
+SA,Regional SA,Regional,346,154
+WA,Destination Perth,Capital,1080,1241
+WA,Regional WA,Regional,370,466
+TAS,Hobart and the South,Capital,220,175
+TAS,Regional TAS,Regional,269,172
+NT,Darwin,Capital,187,210
+NT,Regional NT,Regional,70,184
+ACT,Canberra - Regional ACT,Capital,638,580

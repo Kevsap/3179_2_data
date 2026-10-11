@@ -1,0 +1,220 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "C9 - Treemap of what business event visitors spent their money on in Australia, 2025 (rectangle area = spend). Radio buttons switch traveller type. Built with Vega (treemaps are not available in Vega-Lite). Source: Tourism Research Australia Business events dashboard (DoTS & IVS), National page, Spend items, Jan-Dec 2025.",
+  "width": 840,
+  "height": 380,
+  "padding": 5,
+  "signals": [
+    {
+      "name": "traveller",
+      "value": "All visitors",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "All visitors",
+          "International",
+          "Domestic overnight",
+          "Domestic daytrips"
+        ],
+        "name": "Show spending by: "
+      }
+    }
+  ],
+  "data": [
+    {
+      "name": "items",
+      "url": "data/tra_be_spend_items.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "year": "number",
+          "spend_m": "number",
+          "share_pct": "number"
+        }
+      },
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.year === 2025 && datum.traveller_type === traveller"
+        },
+        {
+          "type": "formula",
+          "as": "group",
+          "expr": "test(/accommodation|meals|food|groceries|alcohol/i, datum.item) ? 'Food, drink & accommodation' : test(/airfare|transport/i, datum.item) ? 'Getting there & around' : test(/registration/i, datum.item) ? 'Event registration' : 'Shopping, tours & other'"
+        },
+        {
+          "type": "nest",
+          "keys": [
+            "traveller_type"
+          ],
+          "generate": true
+        },
+        {
+          "type": "treemap",
+          "field": "spend_m",
+          "sort": {
+            "field": "value",
+            "order": "descending"
+          },
+          "round": true,
+          "method": "squarify",
+          "paddingInner": 3,
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ]
+        },
+        {
+          "type": "filter",
+          "expr": "!datum.children"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": [
+        "Food, drink & accommodation",
+        "Getting there & around",
+        "Event registration",
+        "Shopping, tours & other"
+      ],
+      "range": [
+        "#5b2a86",
+        "#d9822b",
+        "#2a9d8f",
+        "#b7a6d3"
+      ]
+    }
+  ],
+  "legends": [
+    {
+      "fill": "color",
+      "orient": "bottom",
+      "direction": "horizontal",
+      "symbolType": "square",
+      "labelFontSize": 12,
+      "labelLimit": 300,
+      "columnPadding": 20
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {
+        "data": "items"
+      },
+      "encode": {
+        "enter": {
+          "stroke": {
+            "value": "white"
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "scale": "color",
+            "field": "group"
+          },
+          "tooltip": {
+            "signal": "{'Item': datum.item, 'Spend ($m)': format(datum.spend_m, ','), 'Share of spend': isValid(datum.share_pct) ? datum.share_pct + '%' : '<1%'}"
+          }
+        },
+        "hover": {
+          "fillOpacity": {
+            "value": 0.8
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "items"
+      },
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0 + 8"
+          },
+          "y": {
+            "signal": "datum.y0 + 18"
+          },
+          "text": {
+            "signal": "(datum.x1 - datum.x0) > 70 && (datum.y1 - datum.y0) > 38 ? datum.item : ''"
+          },
+          "limit": {
+            "signal": "datum.x1 - datum.x0 - 12"
+          },
+          "fill": {
+            "signal": "datum.group === 'Shopping, tours & other' ? '#2a2530' : 'white'"
+          },
+          "fontSize": {
+            "value": 13
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "font": {
+            "value": "Source Sans 3, Helvetica, Arial, sans-serif"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "items"
+      },
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0 + 8"
+          },
+          "y": {
+            "signal": "datum.y0 + 34"
+          },
+          "text": {
+            "signal": "(datum.x1 - datum.x0) > 70 && (datum.y1 - datum.y0) > 38 ? '$' + format(datum.spend_m, ',') + 'm' : ''"
+          },
+          "fill": {
+            "signal": "datum.group === 'Shopping, tours & other' ? '#2a2530' : 'white'"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "font": {
+            "value": "Source Sans 3, Helvetica, Arial, sans-serif"
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "legend": {
+      "labelColor": "#2a2530",
+      "labelFont": "Source Sans 3, Helvetica, Arial, sans-serif"
+    },
+    "font": "Source Sans 3, Helvetica, Arial, sans-serif",
+    "background": "transparent"
+  }
+}

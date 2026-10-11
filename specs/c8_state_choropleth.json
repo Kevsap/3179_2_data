@@ -1,0 +1,173 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "C8 - Choropleth map of Australian states and territories coloured by the share of each state's total visitor spend that came from business event visitors, calendar year 2025. Conic equal-area projection (Australian Albers parameters). Sources: Tourism Research Australia Business events dashboard (DoTS & IVS), Jan-Dec 2025; state boundaries ABS ASGS Edition 4 (2026).",
+  "width": 400,
+  "height": 380,
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -132,
+      0,
+      0
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/tra_be_state_2025.csv",
+        "format": {
+          "parse": {
+            "visitors_000": "number",
+            "spend_in_state_m": "number",
+            "pct_of_state_spend": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.traveller_type === 'Total'"
+        },
+        {
+          "lookup": "state_code",
+          "from": {
+            "data": {
+              "url": "data/aus_states.json",
+              "format": {
+                "type": "topojson",
+                "feature": "states"
+              }
+            },
+            "key": "properties.state_code"
+          },
+          "as": "geo"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "shape": {
+          "field": "geo",
+          "type": "geojson"
+        },
+        "color": {
+          "field": "pct_of_state_spend",
+          "type": "quantitative",
+          "title": "% of all visitor spend",
+          "scale": {
+            "scheme": "purples",
+            "domain": [
+              6,
+              19
+            ]
+          },
+          "legend": {
+            "orient": "bottom-left",
+            "direction": "horizontal",
+            "gradientLength": 200,
+            "format": ".0f",
+            "titleLimit": 300
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "State / territory"
+          },
+          {
+            "field": "pct_of_state_spend",
+            "type": "quantitative",
+            "title": "Share of all visitor spend (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "spend_in_state_m",
+            "type": "quantitative",
+            "title": "Business event spend ($m)",
+            "format": ","
+          },
+          {
+            "field": "visitors_000",
+            "type": "quantitative",
+            "title": "Business event visitors ('000)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/tra_be_state_2025.csv",
+        "format": {
+          "parse": {
+            "pct_of_state_spend": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.traveller_type === 'Total'"
+        },
+        {
+          "calculate": "{'WA':[-25.5,122.0],'NT':[-19.5,133.4],'SA':[-30.0,135.6],'QLD':[-22.5,144.5],'NSW':[-32.3,146.8],'VIC':[-36.9,144.3],'TAS':[-42.0,146.6],'ACT':[-36.2,152.4]}[datum.state_code]",
+          "as": "pos"
+        },
+        {
+          "calculate": "datum.pos[0]",
+          "as": "lat"
+        },
+        {
+          "calculate": "datum.pos[1]",
+          "as": "lon"
+        },
+        {
+          "calculate": "datum.state_code + ' ' + format(datum.pct_of_state_spend, '.1f') + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.pct_of_state_spend >= 12 && datum.state_code !== 'ACT'",
+            "value": "white"
+          },
+          "value": "#2a2530"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3, Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelColor": "#4a4552",
+      "titleColor": "#4a4552",
+      "titleFontWeight": "normal"
+    },
+    "background": "transparent"
+  }
+}

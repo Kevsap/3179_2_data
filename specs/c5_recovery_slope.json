@@ -1,0 +1,272 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "C5 - Slope chart comparing short-term visitor arrivals by main reason for journey in financial year 2025-26 against pre-COVID 2018-19 (2018-19 = 100). Conference and business travel are highlighted. Source: ABS Overseas Arrivals and Departures (OAD_REASON).",
+  "width": 440,
+  "height": 420,
+  "data": {
+    "url": "data/oad_reason_monthly.csv",
+    "format": {
+      "parse": {
+        "month": "date:'%Y-%m'",
+        "arrivals": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "month(datum.month) >= 6 ? year(datum.month) + 1 : year(datum.month)",
+      "as": "fy_end"
+    },
+    {
+      "filter": "datum.fy_end === 2019 || datum.fy_end === 2026"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "arrivals",
+          "as": "total"
+        }
+      ],
+      "groupby": [
+        "reason",
+        "fy_end"
+      ]
+    },
+    {
+      "pivot": "fy_end",
+      "value": "total",
+      "groupby": [
+        "reason"
+      ]
+    },
+    {
+      "calculate": "datum['2026'] / datum['2019'] * 100",
+      "as": "index_2026"
+    },
+    {
+      "calculate": "100",
+      "as": "index_2019"
+    },
+    {
+      "fold": [
+        "index_2019",
+        "index_2026"
+      ],
+      "as": [
+        "period_key",
+        "index"
+      ]
+    },
+    {
+      "calculate": "datum.period_key === 'index_2019' ? '2018-19 (before COVID)' : '2025-26 (latest)'",
+      "as": "period"
+    },
+    {
+      "calculate": "datum.reason === 'Convention/conference' || datum.reason === 'Business' ? datum.reason : 'Other reasons'",
+      "as": "group"
+    },
+    {
+      "calculate": "datum.period_key === 'index_2019' ? datum['2019'] : datum['2026']",
+      "as": "arrivals_fy"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "period",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 12,
+        "labelFontWeight": "bold",
+        "domain": false,
+        "ticks": false,
+        "labelLimit": 300
+      },
+      "scale": {
+        "padding": 0.15
+      }
+    },
+    "y": {
+      "field": "index",
+      "type": "quantitative",
+      "title": "Arrivals compared with 2018-19 (2018-19 = 100)",
+      "scale": {
+        "domain": [
+          60,
+          190
+        ]
+      }
+    },
+    "color": {
+      "field": "group",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": [
+          "Convention/conference",
+          "Business",
+          "Other reasons"
+        ],
+        "range": [
+          "#5b2a86",
+          "#d9822b",
+          "#c4bfcc"
+        ]
+      }
+    },
+    "detail": {
+      "field": "reason"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#8a8494",
+        "strokeDash": [
+          3,
+          3
+        ]
+      },
+      "encoding": {
+        "y": {
+          "datum": 100
+        },
+        "x": null,
+        "color": null,
+        "detail": null
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "strokeWidth": {
+          "condition": {
+            "test": "datum.group !== 'Other reasons'",
+            "value": 3.5
+          },
+          "value": 1.5
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 70,
+        "opacity": 1
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "reason",
+            "title": "Reason for trip"
+          },
+          {
+            "field": "period",
+            "title": "Financial year"
+          },
+          {
+            "field": "arrivals_fy",
+            "type": "quantitative",
+            "title": "Arrivals",
+            "format": ","
+          },
+          {
+            "field": "index",
+            "type": "quantitative",
+            "title": "% of 2018-19 level",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 12,
+        "baseline": "middle"
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        },
+        "y": {
+          "field": "label_y",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#7a7484"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.period_key === 'index_2026' && datum.group === 'Other reasons'"
+        },
+        {
+          "calculate": "datum.reason + '  ' + format(datum.index, '.0f') + '%'",
+          "as": "label"
+        },
+        {
+          "calculate": "({'Visiting friends/relatives':107,'Other':102.5,'Holiday':96,'Education':92,'Convention/conference':87.5}[datum.reason] || datum.index)",
+          "as": "label_y"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        },
+        "y": {
+          "field": "label_y",
+          "type": "quantitative"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.period_key === 'index_2026' && datum.group !== 'Other reasons'"
+        },
+        {
+          "calculate": "datum.reason + '  ' + format(datum.index, '.0f') + '%'",
+          "as": "label"
+        },
+        {
+          "calculate": "({'Visiting friends/relatives':107,'Other':102.5,'Holiday':96,'Education':92,'Convention/conference':87.5}[datum.reason] || datum.index)",
+          "as": "label_y"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3, Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#4a4552",
+      "titleColor": "#4a4552",
+      "titleFontWeight": "normal",
+      "gridColor": "#ece9f1",
+      "domainColor": "#b9b3c4"
+    },
+    "axisX": {
+      "grid": false
+    },
+    "background": "transparent"
+  }
+}

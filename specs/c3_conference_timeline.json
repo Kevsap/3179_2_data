@@ -1,0 +1,293 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "C3 - Monthly short-term visitor arrivals to Australia whose main reason for journey was a convention or conference, January 1991 to the latest month. Thin line = monthly count, thick line = 12-month rolling average. Drag across the small overview chart to zoom. Source: ABS Overseas Arrivals and Departures (OAD_REASON).",
+  "data": {
+    "url": "data/oad_reason_monthly.csv",
+    "format": {
+      "parse": {
+        "month": "date:'%Y-%m'",
+        "arrivals": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.reason === 'Convention/conference'"
+    },
+    {
+      "window": [
+        {
+          "op": "mean",
+          "field": "arrivals",
+          "as": "rolling"
+        }
+      ],
+      "frame": [
+        -11,
+        0
+      ],
+      "sort": [
+        {
+          "field": "month"
+        }
+      ]
+    }
+  ],
+  "vconcat": [
+    {
+      "width": 840,
+      "height": 300,
+      "layer": [
+        {
+          "mark": {
+            "type": "line",
+            "color": "#c9c2d9",
+            "strokeWidth": 1,
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "month",
+              "type": "temporal",
+              "title": null,
+              "scale": {
+                "domain": {
+                  "param": "brush"
+                }
+              },
+              "axis": {
+                "format": "%Y",
+                "tickCount": 12
+              }
+            },
+            "y": {
+              "field": "arrivals",
+              "type": "quantitative",
+              "title": "Conference visitors arriving per month",
+              "axis": {
+                "format": "~s"
+              }
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "line",
+            "color": "#5b2a86",
+            "strokeWidth": 2.5,
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "month",
+              "type": "temporal"
+            },
+            "y": {
+              "field": "rolling",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "params": [
+            {
+              "name": "hover",
+              "select": {
+                "type": "point",
+                "encodings": [
+                  "x"
+                ],
+                "nearest": true,
+                "on": "pointerover",
+                "clear": "pointerout"
+              }
+            }
+          ],
+          "mark": {
+            "type": "rule",
+            "color": "#5b2a86",
+            "strokeWidth": 1,
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "month",
+              "type": "temporal"
+            },
+            "opacity": {
+              "condition": {
+                "param": "hover",
+                "empty": false,
+                "value": 0.6
+              },
+              "value": 0
+            },
+            "tooltip": [
+              {
+                "field": "month",
+                "type": "temporal",
+                "title": "Month",
+                "format": "%B %Y"
+              },
+              {
+                "field": "arrivals",
+                "type": "quantitative",
+                "title": "Arrivals that month",
+                "format": ","
+              },
+              {
+                "field": "rolling",
+                "type": "quantitative",
+                "title": "12-month average",
+                "format": ",.0f"
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "date": "2000-09-15",
+                "label": "Sydney Olympics",
+                "row": 0
+              },
+              {
+                "date": "2001-09-11",
+                "label": "September 11",
+                "row": 1
+              },
+              {
+                "date": "2003-04-01",
+                "label": "SARS",
+                "row": 2
+              },
+              {
+                "date": "2008-09-15",
+                "label": "Global financial crisis",
+                "row": 0
+              },
+              {
+                "date": "2020-03-20",
+                "label": "Borders close (COVID-19)",
+                "row": 0
+              },
+              {
+                "date": "2022-02-21",
+                "label": "Borders reopen",
+                "row": 1
+              }
+            ]
+          },
+          "transform": [
+            {
+              "calculate": "toDate(datum.date)",
+              "as": "event_date"
+            },
+            {
+              "calculate": "8 + datum.row * 14",
+              "as": "ypix"
+            }
+          ],
+          "layer": [
+            {
+              "mark": {
+                "type": "rule",
+                "color": "#8a8494",
+                "strokeDash": [
+                  3,
+                  3
+                ],
+                "clip": true
+              },
+              "encoding": {
+                "x": {
+                  "field": "event_date",
+                  "type": "temporal"
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "dx": 4,
+                "fontSize": 11,
+                "color": "#4a4552",
+                "clip": true
+              },
+              "encoding": {
+                "x": {
+                  "field": "event_date",
+                  "type": "temporal"
+                },
+                "y": {
+                  "field": "ypix",
+                  "type": "quantitative",
+                  "scale": null
+                },
+                "text": {
+                  "field": "label"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 840,
+      "height": 50,
+      "params": [
+        {
+          "name": "brush",
+          "select": {
+            "type": "interval",
+            "encodings": [
+              "x"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "area",
+        "color": "#c9c2d9"
+      },
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "temporal",
+          "title": "Drag across this strip to zoom in",
+          "axis": {
+            "format": "%Y",
+            "tickCount": 12
+          }
+        },
+        "y": {
+          "field": "arrivals",
+          "type": "quantitative",
+          "title": null,
+          "axis": null
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3, Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#4a4552",
+      "titleColor": "#4a4552",
+      "titleFontWeight": "normal",
+      "gridColor": "#ece9f1",
+      "domainColor": "#b9b3c4",
+      "tickColor": "#b9b3c4"
+    },
+    "axisX": {
+      "grid": false
+    },
+    "background": "transparent"
+  }
+}

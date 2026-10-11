@@ -1,0 +1,213 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "C7 - Bump chart of world rankings for international association meetings for six Australian cities, 2019 and 2022-2025 (2020-21 not ranked in available sources). Lower rank number = better; log scale. Hover a line to highlight a city. Sources: ICCA Country & City Rankings 2019 and 2022; micenet (mice.net.au) reports on ICCA 2023, 2024 and 2025 rankings.",
+  "width": 540,
+  "height": 360,
+  "data": {
+    "url": "data/icca_cities.csv",
+    "format": {
+      "parse": {
+        "year": "number",
+        "rank": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "indexof(['Sydney','Melbourne','Brisbane','Perth','Adelaide','Gold Coast'], datum.city) >= 0"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 12,
+        "domain": false,
+        "ticks": false
+      },
+      "scale": {
+        "padding": 0.3
+      }
+    },
+    "y": {
+      "field": "rank",
+      "type": "quantitative",
+      "title": "World rank (1 = most international meetings)",
+      "scale": {
+        "type": "log",
+        "reverse": true,
+        "domain": [
+          15,
+          320
+        ]
+      },
+      "axis": {
+        "values": [
+          20,
+          30,
+          50,
+          100,
+          200,
+          300
+        ]
+      }
+    },
+    "color": {
+      "field": "city",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": [
+          "Sydney",
+          "Melbourne",
+          "Brisbane",
+          "Perth",
+          "Adelaide",
+          "Gold Coast"
+        ],
+        "range": [
+          "#5b2a86",
+          "#d9822b",
+          "#2a9d8f",
+          "#c0392b",
+          "#7f8c8d",
+          "#3a6ea5"
+        ]
+      }
+    },
+    "opacity": {
+      "condition": {
+        "param": "pick",
+        "empty": true,
+        "value": 1
+      },
+      "value": 0.15
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3,
+        "point": false
+      },
+      "params": [
+        {
+          "name": "pick",
+          "select": {
+            "type": "point",
+            "fields": [
+              "city"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 110
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "city",
+            "title": "City"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "rank",
+            "title": "World rank"
+          },
+          {
+            "field": "meetings",
+            "title": "Meetings (if published)"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === 2025 && datum.city !== 'Adelaide' && datum.city !== 'Gold Coast'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "city"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === 2025 && datum.city === 'Adelaide'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "dy": -8
+      },
+      "encoding": {
+        "text": {
+          "field": "city"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year === 2025 && datum.city === 'Gold Coast'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "dy": 8
+      },
+      "encoding": {
+        "text": {
+          "field": "city"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3, Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#4a4552",
+      "titleColor": "#4a4552",
+      "titleFontWeight": "normal",
+      "gridColor": "#ece9f1"
+    },
+    "axisX": {
+      "grid": false
+    },
+    "background": "transparent"
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "C10 - Proportional symbol map of business event activity in Australia's capital cities and the Gold Coast, calendar year 2025. Circle area = business event visitor spend or visitors (switchable). Conic equal-area projection. Sources: Tourism Research Australia Business events dashboard (DoTS & IVS), State page regions, Jan-Dec 2025; state boundaries ABS ASGS Edition 4 (2026).",
+  "width": 400,
+  "height": 380,
+  "params": [
+    {
+      "name": "measure",
+      "value": "Spend",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "Spend",
+          "Visitors"
+        ],
+        "name": "Circle size shows: "
+      }
+    }
+  ],
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -132,
+      0,
+      0
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/aus_states.json",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ece9f1",
+        "stroke": "white",
+        "strokeWidth": 1.5
+      }
+    },
+    {
+      "data": {
+        "url": "data/tra_be_regions_2025.csv",
+        "format": {
+          "parse": {
+            "visitors_000": "number",
+            "spend_in_state_m": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.region_type !== 'Regional'"
+        },
+        {
+          "calculate": "{'Destination Perth':'Perth','Hobart and the South':'Hobart','Canberra - Regional ACT':'Canberra'}[datum.region] || datum.region",
+          "as": "city"
+        },
+        {
+          "lookup": "city",
+          "from": {
+            "data": {
+              "url": "data/city_coords.csv",
+              "format": {
+                "parse": {
+                  "lat": "number",
+                  "lon": "number"
+                }
+              }
+            },
+            "key": "city",
+            "fields": [
+              "lat",
+              "lon"
+            ]
+          }
+        },
+        {
+          "calculate": "measure === 'Spend' ? datum.spend_in_state_m : datum.visitors_000",
+          "as": "value"
+        },
+        {
+          "calculate": "measure === 'Spend' ? '$' + format(datum.spend_in_state_m, ',') + 'm' : format(datum.visitors_000, ',') + 'k'",
+          "as": "value_label"
+        },
+        {
+          "calculate": "datum.spend_in_state_m * 1000 / datum.visitors_000",
+          "as": "spend_per_visitor"
+        }
+      ],
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "circle",
+            "color": "#5b2a86",
+            "opacity": 0.75,
+            "stroke": "white",
+            "strokeWidth": 1
+          },
+          "encoding": {
+            "size": {
+              "field": "value",
+              "type": "quantitative",
+              "scale": {
+                "range": [
+                  40,
+                  3200
+                ],
+                "zero": true
+              },
+              "legend": null
+            },
+            "tooltip": [
+              {
+                "field": "region",
+                "title": "City"
+              },
+              {
+                "field": "spend_in_state_m",
+                "type": "quantitative",
+                "title": "Business event spend ($m)",
+                "format": ","
+              },
+              {
+                "field": "visitors_000",
+                "type": "quantitative",
+                "title": "Business event visitors ('000)",
+                "format": ","
+              },
+              {
+                "field": "spend_per_visitor",
+                "type": "quantitative",
+                "title": "Spend per visitor ($)",
+                "format": ",.0f"
+              }
+            ]
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.city !== 'Gold Coast' && datum.city !== 'Canberra'"
+            },
+            {
+              "calculate": "toNumber(datum.lon) + ({'Sydney':2.6,'Melbourne':2.0,'Brisbane':2.0,'Perth':1.6,'Adelaide':1.4,'Darwin':1.2,'Hobart':1.0}[datum.city] || 1.2)",
+              "as": "lab_lon"
+            },
+            {
+              "calculate": "toNumber(datum.lat) + (0.7)",
+              "as": "lab_lat"
+            },
+            {
+              "calculate": "datum.city + ' ' + datum.value_label",
+              "as": "full"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 12,
+            "color": "#2a2530",
+            "fontWeight": "bold"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lab_lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lab_lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "city"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.city !== 'Gold Coast' && datum.city !== 'Canberra'"
+            },
+            {
+              "calculate": "toNumber(datum.lon) + ({'Sydney':2.6,'Melbourne':2.0,'Brisbane':2.0,'Perth':1.6,'Adelaide':1.4,'Darwin':1.2,'Hobart':1.0}[datum.city] || 1.2)",
+              "as": "lab_lon"
+            },
+            {
+              "calculate": "toNumber(datum.lat) + (-0.7)",
+              "as": "lab_lat"
+            },
+            {
+              "calculate": "datum.city + ' ' + datum.value_label",
+              "as": "full"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 11,
+            "color": "#4a4552"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lab_lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lab_lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "value_label"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.city === 'Canberra'"
+            },
+            {
+              "calculate": "toNumber(datum.lon) + (-0.4)",
+              "as": "lab_lon"
+            },
+            {
+              "calculate": "toNumber(datum.lat) + (3.3)",
+              "as": "lab_lat"
+            },
+            {
+              "calculate": "datum.city + ' ' + datum.value_label",
+              "as": "full"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "middle",
+            "fontSize": 12,
+            "color": "#2a2530",
+            "fontWeight": "bold"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lab_lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lab_lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "city"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.city === 'Canberra'"
+            },
+            {
+              "calculate": "toNumber(datum.lon) + (-0.4)",
+              "as": "lab_lon"
+            },
+            {
+              "calculate": "toNumber(datum.lat) + (2.1)",
+              "as": "lab_lat"
+            },
+            {
+              "calculate": "datum.city + ' ' + datum.value_label",
+              "as": "full"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "middle",
+            "fontSize": 11,
+            "color": "#4a4552"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lab_lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lab_lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "value_label"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.city === 'Gold Coast'"
+            },
+            {
+              "calculate": "toNumber(datum.lon) + (1.4)",
+              "as": "lab_lon"
+            },
+            {
+              "calculate": "toNumber(datum.lat) + (-1.6)",
+              "as": "lab_lat"
+            },
+            {
+              "calculate": "datum.city + ' ' + datum.value_label",
+              "as": "full"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "fontSize": 11,
+            "color": "#4a4552"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lab_lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lab_lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "full"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3, Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "background": "transparent"
+  }
+}

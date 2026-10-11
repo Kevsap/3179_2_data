@@ -1,0 +1,117 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "C2 - Bar chart of average spend in Australia per business event visitor by type of traveller, 2025. Source: Tourism Research Australia Business events dashboard (DoTS & IVS), National page, Jan-Dec 2025.",
+  "width": 330,
+  "height": 150,
+  "data": {
+    "url": "data/tra_be_headline.csv",
+    "format": {
+      "parse": {
+        "year": "number",
+        "avg_spend_in_aus": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.year === 2025 && datum.traveller_type !== 'All visitors'"
+    },
+    {
+      "calculate": "datum.traveller_type === 'Domestic daytrips' ? 'Domestic day trip' : datum.traveller_type",
+      "as": "type"
+    },
+    {
+      "calculate": "'$' + format(datum.avg_spend_in_aus, ',')",
+      "as": "label"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "type",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "International",
+        "Domestic overnight",
+        "Domestic day trip"
+      ],
+      "axis": {
+        "labelFontSize": 13,
+        "domain": false,
+        "ticks": false,
+        "labelLimit": 250
+      }
+    },
+    "x": {
+      "field": "avg_spend_in_aus",
+      "type": "quantitative",
+      "title": null,
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 30,
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "International",
+              "Domestic overnight",
+              "Domestic day trip"
+            ],
+            "range": [
+              "#d9822b",
+              "#5b2a86",
+              "#b7a6d3"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "type",
+            "title": "Traveller type"
+          },
+          {
+            "field": "avg_spend_in_aus",
+            "type": "quantitative",
+            "title": "Average spend per visitor ($)",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "color": "#2a2530"
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3, Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#2a2530"
+    },
+    "background": "transparent"
+  }
+}

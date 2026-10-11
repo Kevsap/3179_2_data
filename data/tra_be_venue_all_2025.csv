@@ -1,0 +1,9 @@
+role,event_type,pct_convention_centre,pct_hotel,pct_university,pct_other_unknown
+Attend,Business meeting,44,37,19,41
+Attend,Corporate event,22,33,5,61
+Attend,Other business event,39,21,14,44
+Attend,Attend event total,35,21,13,47
+Accompany,Business meeting,63,62,1,51
+Accompany,Corporate event,34,68,8,24
+Accompany,Other business event,40,39,23,40
+Accompany,Accompany to event total,35,20,16,48

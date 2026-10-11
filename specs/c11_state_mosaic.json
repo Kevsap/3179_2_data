@@ -1,0 +1,317 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "C11 - Mosaic (Marimekko) chart of business event visitor spend by state and type of traveller, 2025. Column width = state's share of national business event spend; segment height = share of that state's spend from domestic day trips, domestic overnight and international visitors. Source: Tourism Research Australia Business events dashboard (DoTS & IVS), State page, Jan-Dec 2025.",
+  "width": 840,
+  "height": 340,
+  "data": {
+    "url": "data/tra_be_state_2025.csv",
+    "format": {
+      "parse": {
+        "spend_in_state_m": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.traveller_type !== 'Total'"
+    },
+    {
+      "calculate": "datum.traveller_type === 'Domestic day' ? 'Domestic day trips' : datum.traveller_type",
+      "as": "type"
+    },
+    {
+      "calculate": "{'International': 1, 'Domestic overnight': 2, 'Domestic day trips': 3}[datum.type]",
+      "as": "type_order"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "spend_in_state_m",
+          "as": "state_total"
+        }
+      ],
+      "groupby": [
+        "state_code"
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "spend_in_state_m",
+          "as": "national_total"
+        }
+      ]
+    },
+    {
+      "calculate": "-datum.state_total",
+      "as": "neg_total"
+    },
+    {
+      "stack": "spend_in_state_m",
+      "groupby": [],
+      "as": [
+        "sx1",
+        "sx2"
+      ],
+      "offset": "normalize",
+      "sort": [
+        {
+          "field": "neg_total"
+        },
+        {
+          "field": "state_code"
+        },
+        {
+          "field": "type_order"
+        }
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "min",
+          "field": "sx1",
+          "as": "x"
+        },
+        {
+          "op": "max",
+          "field": "sx2",
+          "as": "x2"
+        }
+      ],
+      "groupby": [
+        "state_code"
+      ],
+      "frame": [
+        null,
+        null
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "dense_rank",
+          "as": "state_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "neg_total"
+        },
+        {
+          "field": "state_code"
+        }
+      ],
+      "frame": [
+        null,
+        null
+      ]
+    },
+    {
+      "stack": "spend_in_state_m",
+      "groupby": [
+        "state_code"
+      ],
+      "as": [
+        "y",
+        "y2"
+      ],
+      "offset": "normalize",
+      "sort": [
+        {
+          "field": "type_order"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.x + (datum.state_rank - 1) * 0.006",
+      "as": "nx"
+    },
+    {
+      "calculate": "datum.x2 + (datum.state_rank - 1) * 0.006 - 0.002",
+      "as": "nx2"
+    },
+    {
+      "calculate": "(datum.nx + datum.nx2) / 2",
+      "as": "xc"
+    },
+    {
+      "calculate": "(datum.y + datum.y2) / 2",
+      "as": "yc"
+    },
+    {
+      "calculate": "(datum.y2 - datum.y) * 100",
+      "as": "pct_of_state"
+    },
+    {
+      "calculate": "datum.state_total / datum.national_total * 100",
+      "as": "pct_of_nation"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "nx",
+      "type": "quantitative",
+      "axis": null,
+      "scale": {
+        "domain": [
+          0,
+          1.045
+        ]
+      }
+    },
+    "y": {
+      "field": "y",
+      "type": "quantitative",
+      "axis": null,
+      "scale": {
+        "domain": [
+          0,
+          1.09
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x2": {
+          "field": "nx2"
+        },
+        "y2": {
+          "field": "y2"
+        },
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "International",
+              "Domestic overnight",
+              "Domestic day trips"
+            ],
+            "range": [
+              "#d9822b",
+              "#5b2a86",
+              "#b7a6d3"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "labelFontSize": 12,
+            "labelLimit": 300,
+            "symbolType": "square"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "State / territory"
+          },
+          {
+            "field": "type",
+            "title": "Traveller type"
+          },
+          {
+            "field": "spend_in_state_m",
+            "type": "quantitative",
+            "title": "Spend ($m)",
+            "format": ","
+          },
+          {
+            "field": "pct_of_state",
+            "type": "quantitative",
+            "title": "% of state's business event spend",
+            "format": ".0f"
+          },
+          {
+            "field": "pct_of_nation",
+            "type": "quantitative",
+            "title": "State's % of national total",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "(datum.nx2 - datum.nx) > 0.045 && datum.pct_of_state >= 8"
+        },
+        {
+          "calculate": "format(datum.pct_of_state, '.0f') + '%'",
+          "as": "pct_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "color": "white",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "xc",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "yc",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "pct_label"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.type_order === 1"
+        },
+        {
+          "calculate": "1.045",
+          "as": "label_y"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#2a2530",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {
+          "field": "xc",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "label_y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "state_code"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3, Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelColor": "#2a2530"
+    },
+    "background": "transparent"
+  }
+}

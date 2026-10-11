@@ -1,0 +1,134 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "C1 - Waffle chart of the $17.2 billion spent in Australia by business event visitors in 2025. Each square = $100 million. Colour = type of traveller (domestic day trip, domestic overnight, international). Source: Tourism Research Australia Business events dashboard (DoTS & IVS), National page, Jan-Dec 2025.",
+  "width": 440,
+  "height": 200,
+  "data": {
+    "url": "data/tra_be_headline.csv",
+    "format": {
+      "parse": {
+        "year": "number",
+        "spend_in_aus_m": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "datum.year === 2025 && datum.traveller_type !== 'All visitors'"
+    },
+    {
+      "calculate": "{'International': 1, 'Domestic overnight': 2, 'Domestic daytrips': 3}[datum.traveller_type]",
+      "as": "order"
+    },
+    {
+      "calculate": "round(datum.spend_in_aus_m / 100)",
+      "as": "squares"
+    },
+    {
+      "calculate": "sequence(0, datum.squares)",
+      "as": "seq"
+    },
+    {
+      "flatten": [
+        "seq"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "i"
+        }
+      ],
+      "sort": [
+        {
+          "field": "order"
+        },
+        {
+          "field": "seq"
+        }
+      ]
+    },
+    {
+      "calculate": "(datum.i - 1) % 20",
+      "as": "col"
+    },
+    {
+      "calculate": "floor((datum.i - 1) / 20)",
+      "as": "row"
+    },
+    {
+      "calculate": "datum.traveller_type === 'Domestic daytrips' ? 'Domestic day trips' : datum.traveller_type",
+      "as": "type"
+    }
+  ],
+  "mark": {
+    "type": "square",
+    "size": 300,
+    "opacity": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "col",
+      "type": "ordinal",
+      "axis": null
+    },
+    "y": {
+      "field": "row",
+      "type": "ordinal",
+      "axis": null
+    },
+    "color": {
+      "field": "type",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "International",
+        "Domestic overnight",
+        "Domestic day trips"
+      ],
+      "scale": {
+        "domain": [
+          "International",
+          "Domestic overnight",
+          "Domestic day trips"
+        ],
+        "range": [
+          "#d9822b",
+          "#5b2a86",
+          "#b7a6d3"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "labelFontSize": 13,
+        "symbolType": "square",
+        "symbolSize": 200,
+        "labelLimit": 300
+      }
+    },
+    "tooltip": [
+      {
+        "field": "type",
+        "title": "Traveller type"
+      },
+      {
+        "field": "spend_in_aus_m",
+        "type": "quantitative",
+        "title": "Spend in Australia ($m)",
+        "format": ","
+      }
+    ]
+  },
+  "config": {
+    "font": "Source Sans 3, Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelColor": "#2a2530"
+    },
+    "background": "transparent"
+  }
+}

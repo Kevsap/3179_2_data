@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lanyards &amp; Luggage: Business Events Tourism in Australia</title>
+  <meta name="description" content="A data story about conferences, conventions and business events tourism in Australia, 1991 to 2026.">
+  <meta name="author" content="KEVIN SAPUTRA">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vega, Vega-Lite and Vega-Embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker">A data story about business events in Australia</p>
+      <h1>Lanyards &amp; Luggage</h1>
+      <p class="subtitle">The $17 billion visitors you never notice</p>
+      <p class="lede">Every year, millions of people travel across Australia, and from overseas, to attend a conference, an exhibition or a work meeting. They fill our hotels, eat in our restaurants and fly between our cities. This page follows where they come from, where they go, and how they came back after COVID.</p>
+    </div>
+    <div class="badge" aria-hidden="true">
+      <div class="badge-top">HELLO<span>my name is</span></div>
+      <div class="badge-name">Business Event Visitor</div>
+      <div class="badge-role">One of 20.7 million in 2025</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="stats" aria-label="Key numbers for 2025">
+    <div class="stat"><div class="num">$17.2b</div><div class="lbl">spent in Australia by business event visitors in 2025</div></div>
+    <div class="stat"><div class="num">20.7m</div><div class="lbl">trips to attend a business event, or to go along with someone who did</div></div>
+    <div class="stat"><div class="num">731,000</div><div class="lbl">of those visitors came from overseas</div></div>
+    <div class="stat"><div class="num">88%</div><div class="lbl">of pre-COVID conference arrivals have returned (2025-26)</div></div>
+  </section>
+
+  <!-- ================= CHAPTER 1 ================= -->
+  <section class="chapter">
+    <div class="chapter-head">
+      <p class="chapter-no">Chapter 1 · The size of it</p>
+      <h2>A quiet industry worth $17 billion</h2>
+      <p>When we think of tourism, we picture holidays. But a large share of travel happens because of work. A <strong>business event</strong> is any of the following:</p>
+      <div class="explainer">
+        <div><strong>Conference</strong>or convention</div>
+        <div><strong>Exhibition</strong>or trade fair</div>
+        <div><strong>Seminar</strong>or training day</div>
+        <div><strong>Corporate</strong>event</div>
+        <div><strong>Business</strong>meeting</div>
+      </div>
+    </div>
+
+    <div class="two-col row">
+      <figure class="figure">
+        <h3>Most of the money comes from Australians travelling interstate</h3>
+        <p class="note">Each square is $100 million of spending in 2025. Overnight domestic travellers account for 70%.</p>
+        <div id="c1" class="chart"></div>
+        <p class="source">Source: Tourism Research Australia, Business events data (DoTS &amp; IVS), Jan–Dec 2025.</p>
+      </figure>
+      <figure class="figure">
+        <h3>An overseas delegate spends 13 times more than a day-tripper</h3>
+        <p class="note">Average spend in Australia per visitor, 2025.</p>
+        <div id="c2" class="chart"></div>
+        <div class="callout" style="margin-top:18px">
+          <div class="big">$3,202</div>
+          <p>is what the average international business event visitor spends while in Australia, not counting their flight here.</p>
+        </div>
+        <p class="source">Source: Tourism Research Australia, Business events data, Jan–Dec 2025.</p>
+      </figure>
+    </div>
+
+    <figure class="figure">
+      <h3>Where the money goes: hotels, meals and flights</h3>
+      <p class="note">What business event visitors spent their money on in 2025. A bigger box means more money. Registration fees are only 4% of the total; most spending flows to local hotels, restaurants and transport. Switch the traveller type below the chart.</p>
+      <div id="c9" class="chart"></div>
+      <p class="source">Source: Tourism Research Australia, Business events data, Spend items, Jan–Dec 2025. Categories differ slightly between traveller types.</p>
+    </figure>
+  </section>
+
+  <!-- ================= CHAPTER 2 ================= -->
+  <section class="chapter">
+    <div class="chapter-head">
+      <p class="chapter-no">Chapter 2 · 35 years at the border</p>
+      <h2>Built over three decades, lost in a month</h2>
+      <p>Every visitor to Australia states the main reason for their trip on arrival. The Australian Bureau of Statistics has counted the visitors who come for a <strong>convention or conference</strong> every month since 1991. The record shows steady growth, a few shocks, and one collapse.</p>
+    </div>
+
+    <figure class="figure">
+      <h3>Conference visitors grew for 30 years, then COVID closed the border</h3>
+      <p class="note">Overseas visitors arriving for a convention or conference each month. The thick line is the 12-month average. <strong>Drag across the small strip</strong> to zoom into any period, and hover for exact numbers.</p>
+      <div id="c3" class="chart"></div>
+      <p class="source">Source: Australian Bureau of Statistics, Overseas Arrivals and Departures (short-term visitor arrivals by main reason for journey), Jan 1991 – Jul 2026.</p>
+    </figure>
+
+    <figure class="figure">
+      <h3>Spring is conference season</h3>
+      <p class="note">Each square is one month; darker means more visitors. September to November is the busiest time, while December and January are quiet. The empty band in 2020–21 is the border closure. Switch to compare with business visitors.</p>
+      <div id="c4" class="chart"></div>
+      <p class="source">Source: Australian Bureau of Statistics, Overseas Arrivals and Departures, Jan 1991 – Jul 2026.</p>
+    </figure>
+
+    <figure class="figure">
+      <h3>Holidaymakers are back; work travellers are not</h3>
+      <div class="chart-and-text">
+        <div id="c5" class="chart"></div>
+        <div>
+          <div class="callout purple">
+            <div class="big">88%</div>
+            <p>Conference arrivals in 2025-26 reached 88% of their pre-COVID level.</p>
+          </div>
+          <div class="callout" style="margin-top:14px">
+            <div class="big">72%</div>
+            <p>Business arrivals have recovered the least of any reason for travel.</p>
+          </div>
+          <p class="note" style="margin-top:14px">Each line compares a financial year's arrivals with 2018-19 (set at 100). Conferences have recovered faster than individual business trips.</p>
+        </div>
+      </div>
+      <p class="source">Source: Australian Bureau of Statistics, Overseas Arrivals and Departures, financial years 2018-19 and 2025-26.</p>
+    </figure>
+  </section>
+
+  <!-- ================= CHAPTER 3 ================= -->
+  <section class="chapter">
+    <div class="chapter-head">
+      <p class="chapter-no">Chapter 3 · Where they come from</p>
+      <h2>Our nearest neighbour sends the most delegates</h2>
+      <p>New Zealand sends more business event visitors than any other country. But numbers are not everything: visitors from further away stay longer and spend more.</p>
+    </div>
+
+    <figure class="figure">
+      <h3>Switch the measure and the map changes</h3>
+      <p class="note">Top 10 home countries of international business event visitors in 2025. Line width shows the selected measure. By <strong>visitors</strong>, New Zealand leads with 165,000. By <strong>nights stayed</strong> and <strong>spend</strong>, China leads, and India and the UK move up.</p>
+      <div id="c6" class="chart"></div>
+      <p class="source">Source: Tourism Research Australia, Business events data (IVS), International page, Jan–Dec 2025. Map: Natural Earth via vega-datasets. Lines join each country's capital to the centre of Australia.</p>
+    </figure>
+  </section>
+
+  <!-- ================= CHAPTER 4 ================= -->
+  <section class="chapter">
+    <div class="chapter-head">
+      <p class="chapter-no">Chapter 4 · Where they meet</p>
+      <h2>Big cities earn the most, small capitals need it most</h2>
+      <p>Sydney and Melbourne collect the largest amounts. But for Canberra and Darwin, business events make up a far bigger part of their whole tourism economy.</p>
+    </div>
+
+    <div class="two-col row">
+      <figure class="figure">
+        <h3>For Canberra and Darwin, one tourist dollar in six comes from business events</h3>
+        <p class="note">Business events' share of all visitor spending in each state, 2025. Hover over a state for details.</p>
+        <div id="c8" class="chart"></div>
+        <p class="source">Source: Tourism Research Australia, Business events data, State page, Jan–Dec 2025. Boundaries: ABS ASGS Edition 4 (2026).</p>
+      </figure>
+      <figure class="figure">
+        <h3>Sydney earns the most, Melbourne follows</h3>
+        <p class="note">Business event spending in each capital city and the Gold Coast, 2025. A bigger circle means more money. Switch to see visitor numbers.</p>
+        <div id="c10" class="chart"></div>
+        <p class="source">Source: Tourism Research Australia, Business events data, State page regions, Jan–Dec 2025.</p>
+      </figure>
+    </div>
+
+    <figure class="figure">
+      <h3>Smaller states depend on visitors who fly in and stay</h3>
+      <p class="note">Business event spending by state in 2025. A wider column means a bigger share of the national total; NSW alone takes 34%. In NSW and Victoria about one dollar in five comes from day-trippers. In Queensland, WA and SA, three in four dollars come from overnight visitors.</p>
+      <div id="c11" class="chart"></div>
+      <p class="source">Source: Tourism Research Australia, Business events data, State page, Jan–Dec 2025.</p>
+    </figure>
+  </section>
+
+  <!-- ================= CHAPTER 5 ================= -->
+  <section class="chapter">
+    <div class="chapter-head">
+      <p class="chapter-no">Chapter 5 · The global race</p>
+      <h2>Australia competes with the world for every conference</h2>
+      <p>International associations move their annual congress to a new country each year, and cities bid against each other to host them. The International Congress and Convention Association (ICCA) ranks cities by how many of these meetings they hold.</p>
+    </div>
+
+    <figure class="figure">
+      <h3>Brisbane is rising, Melbourne is slipping</h3>
+      <div class="chart-and-text">
+        <div id="c7" class="chart"></div>
+        <div>
+          <div class="callout purple">
+            <div class="big">14th</div>
+            <p>Australia's world ranking in 2025, up from 17th in 2024 but below 12th in 2019.</p>
+          </div>
+          <p class="note" style="margin-top:14px">Higher on the chart is better. Sydney has been Australia's top city every year. In 2025 Brisbane jumped from 94th to 49th, while Melbourne fell from 31st to 58th. Hover over a line to highlight a city.</p>
+        </div>
+      </div>
+      <p class="source">Source: ICCA Country &amp; City Rankings 2019 and 2022; micenet reports on the ICCA 2023, 2024 and 2025 rankings. No rankings were found for 2020 and 2021.</p>
+    </figure>
+  </section>
+
+  <!-- ================= CHAPTER 6 ================= -->
+  <section class="chapter">
+    <div class="chapter-head">
+      <p class="chapter-no">Chapter 6 · What it means for you</p>
+      <h2>Three things to remember</h2>
+    </div>
+    <div class="takeaways">
+      <div class="takeaway"><div class="n">01</div><h3>It is bigger than it looks</h3><p>Business event visitors spent $17.2 billion in 2025, mostly on hotels, meals and transport, money that supports local jobs well beyond the convention centre.</p></div>
+      <div class="takeaway"><div class="n">02</div><h3>The recovery is not finished</h3><p>Conference arrivals are at 88% of their pre-COVID level and business arrivals at 72%, while holiday and family travel are nearly back to normal.</p></div>
+      <div class="takeaway"><div class="n">03</div><h3>Every city is in the race</h3><p>Smaller capitals rely on business events the most, and Australian cities are competing with the world to win them. Brisbane's rise shows rankings can change quickly.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section class="about">
+  <div class="wrap">
+    <h2>About this visualisation</h2>
+    <div class="wwwh">
+      <div><strong>Who</strong>Written for the average Australian: no tourism or statistics background needed. Jargon is explained and every chart has a plain-English headline.</div>
+      <div><strong>Why</strong>Business events tourism is large but rarely discussed. This page shows its size, how it recovered after COVID, and which places depend on it.</div>
+      <div><strong>What</strong>Official visitor surveys (TRA), border movement records (ABS, 1991–2026) and international meeting rankings (ICCA), plus map boundaries.</div>
+      <div><strong>How</strong>11 interactive charts, including 3 map types, built with Vega-Lite and Vega and arranged as a six-chapter story.</div>
+    </div>
+
+    <h3>Visualisation idioms (Munzner's What / Why / How)</h3>
+    <table class="idioms">
+      <thead><tr><th>Chart</th><th>What (data)</th><th>Why (task)</th><th>How (marks, channels, interaction)</th></tr></thead>
+      <tbody>
+        <tr><td>Waffle chart</td><td>3 categories, spend ($m)</td><td>Show part-to-whole</td><td>Square marks; count of squares; colour hue = traveller type</td></tr>
+        <tr><td>Bar chart</td><td>3 categories, average spend</td><td>Compare values</td><td>Bar length; colour hue</td></tr>
+        <tr><td>Treemap</td><td>Spend items grouped into 4 themes</td><td>Part-to-whole, find the largest items</td><td>Rectangle area = spend; hue = theme; radio filter by traveller type</td></tr>
+        <tr><td>Line chart, overview + detail</td><td>Monthly time series, 1991–2026</td><td>Discover trends, locate shocks</td><td>Line position; annotated event rules; brush to zoom; hover tooltip</td></tr>
+        <tr><td>Calendar heatmap</td><td>Year × month, arrivals</td><td>Find seasonal patterns</td><td>Cell marks; colour luminance; radio filter by reason</td></tr>
+        <tr><td>Slope chart</td><td>7 reasons × 2 years (index)</td><td>Compare change</td><td>Line slope and position; hue highlights conference and business</td></tr>
+        <tr><td>Flow map</td><td>Origin–destination links, 10 countries</td><td>Locate origins, compare volumes</td><td>Line width and circle area; Equal Earth projection; radio to switch measure</td></tr>
+        <tr><td>Choropleth map</td><td>8 states, % share of spend</td><td>Compare regions</td><td>Area marks; colour luminance; conic equal-area projection</td></tr>
+        <tr><td>Proportional symbol map</td><td>9 cities, spend / visitors</td><td>Compare magnitude by place</td><td>Circle area at city location; radio to switch measure</td></tr>
+        <tr><td>Mosaic (Marimekko) chart</td><td>8 states × 3 traveller types, spend</td><td>Part-to-whole within and across states</td><td>Rectangle width and height; colour hue</td></tr>
+        <tr><td>Bump chart</td><td>World rank of 6 cities over 5 years</td><td>Track rank changes</td><td>Line position (log scale); hue per city; hover highlight</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Notes on the data</h3>
+    <ul>
+      <li>TRA changed how it measures domestic travel from January 2025, adding mobility data. Domestic results for 2025 should not be compared directly with earlier years; international results are unaffected.</li>
+      <li>TRA's dashboard does not allow downloads, so its figures were transcribed exactly as published.</li>
+      <li>ABS figures count border crossings, not people, and only the <em>main</em> reason for the trip. A delegate who ticked "holiday" is not counted as a conference visitor.</li>
+      <li>ABS public data does not split reason for travel by country or state, so the maps use TRA data instead.</li>
+      <li>ICCA counts only international association meetings that rotate between countries, not corporate events. Meeting counts were only published for 2019 and 2022, so the bump chart shows rank.</li>
+      <li>All dollar values are nominal (not adjusted for inflation).</li>
+    </ul>
+
+    <h3>Sources</h3>
+    <ul>
+      <li>Tourism Research Australia (Austrade), <a href="https://www.tra.gov.au/en/tourism-statistics/business-events-data">Business events data</a>, Jan–Dec 2024 and 2025.</li>
+      <li>Australian Bureau of Statistics, <a href="https://www.abs.gov.au/statistics/industry/tourism-and-transport/overseas-arrivals-and-departures-australia/latest-release">Overseas Arrivals and Departures, Australia</a>, July 2026 release (dataset OAD_REASON).</li>
+      <li>Australian Bureau of Statistics, <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-4-july-2026-june-2031/access-and-downloads/digital-boundary-files">ASGS Edition 4 State and Territory boundaries</a> (2026), simplified with mapshaper.</li>
+      <li>International Congress and Convention Association, <a href="https://www.iccaworld.org/news/post/public-abstract-released-for-globewatch-country-and-city-rankings-2025/">Country &amp; City Rankings</a> 2019 and 2022; <a href="https://mice.net.au/brisbane-the-big-mover-for-australia-in-the-icca-rankings/">micenet</a> reports for 2023–2025.</li>
+      <li>World map: Natural Earth via <a href="https://github.com/vega/vega-datasets">vega-datasets</a> (world-110m).</li>
+    </ul>
+
+    <h3>Chart specifications (JSON)</h3>
+    <ul>
+      <li>
+        <a href="specs/c1_spend_waffle.json">Waffle</a> ·
+        <a href="specs/c2_spend_per_visitor.json">Bar</a> ·
+        <a href="specs/c9_spend_treemap.json">Treemap</a> ·
+        <a href="specs/c3_conference_timeline.json">Timeline</a> ·
+        <a href="specs/c4_conference_heatmap.json">Heatmap</a> ·
+        <a href="specs/c5_recovery_slope.json">Slope</a> ·
+        <a href="specs/c6_origins_flow.json">Flow map</a> ·
+        <a href="specs/c8_state_choropleth.json">Choropleth</a> ·
+        <a href="specs/c10_city_symbols.json">Symbol map</a> ·
+        <a href="specs/c11_state_mosaic.json">Mosaic</a> ·
+        <a href="specs/c7_icca_bump.json">Bump chart</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Created by <strong>KEVIN SAPUTRA</strong> for FIT3179 Data Visualisation, October 2026. Built with Vega-Lite, Vega and Vega-Embed.
+  </div>
+</footer>
+
+<script>
+  const opts = { actions: false };
+  vegaEmbed("#c1", "specs/c1_spend_waffle.json", opts);
+  vegaEmbed("#c2", "specs/c2_spend_per_visitor.json", opts);
+  vegaEmbed("#c9", "specs/c9_spend_treemap.json", opts);
+  vegaEmbed("#c3", "specs/c3_conference_timeline.json", opts);
+  vegaEmbed("#c4", "specs/c4_conference_heatmap.json", opts);
+  vegaEmbed("#c5", "specs/c5_recovery_slope.json", opts);
+  vegaEmbed("#c6", "specs/c6_origins_flow.json", opts);
+  vegaEmbed("#c8", "specs/c8_state_choropleth.json", opts);
+  vegaEmbed("#c10", "specs/c10_city_symbols.json", opts);
+  vegaEmbed("#c11", "specs/c11_state_mosaic.json", opts);
+  vegaEmbed("#c7", "specs/c7_icca_bump.json", opts);
+</script>
+</body>
+</html>

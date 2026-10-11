@@ -1,0 +1,451 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "C6 - Flow map of the top 10 origin countries of international business event visitors to Australia, calendar year 2025. Line width and circle size = selected measure (visitors, nights or spend in Australia). Lines run from each country's capital to the centre of Australia. Equal Earth projection centred on the Pacific. Sources: Tourism Research Australia Business events dashboard (IVS), International page, Jan-Dec 2025; world boundaries vega-datasets world-110m (Natural Earth).",
+  "width": 840,
+  "height": 430,
+  "params": [
+    {
+      "name": "measure_pick",
+      "value": "visitors",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "visitors",
+          "nights",
+          "spend_in_aus"
+        ],
+        "labels": [
+          "Visitors",
+          "Nights stayed",
+          "Spend in Australia"
+        ],
+        "name": "Rank countries by: "
+      }
+    }
+  ],
+  "projection": {
+    "type": "equalEarth",
+    "rotate": [
+      -150,
+      0,
+      0
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "sphere": true
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f7f6fa"
+      }
+    },
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/world-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e2dfe8",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "data/tra_be_intl_origins_2025.csv",
+        "format": {
+          "parse": {
+            "value": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.measure === measure_pick"
+        },
+        {
+          "lookup": "country",
+          "from": {
+            "data": {
+              "values": [
+                {
+                  "country": "New Zealand",
+                  "lat": -41.29,
+                  "lon": 174.78
+                },
+                {
+                  "country": "China",
+                  "lat": 39.9,
+                  "lon": 116.41
+                },
+                {
+                  "country": "United States of America",
+                  "lat": 38.9,
+                  "lon": -77.04
+                },
+                {
+                  "country": "Singapore",
+                  "lat": 1.35,
+                  "lon": 103.82
+                },
+                {
+                  "country": "United Kingdom",
+                  "lat": 51.51,
+                  "lon": -0.13
+                },
+                {
+                  "country": "India",
+                  "lat": 28.61,
+                  "lon": 77.21
+                },
+                {
+                  "country": "Japan",
+                  "lat": 35.68,
+                  "lon": 139.69
+                },
+                {
+                  "country": "Malaysia",
+                  "lat": 3.14,
+                  "lon": 101.69
+                },
+                {
+                  "country": "Hong Kong",
+                  "lat": 22.32,
+                  "lon": 114.17
+                },
+                {
+                  "country": "Korea",
+                  "lat": 37.57,
+                  "lon": 126.98
+                },
+                {
+                  "country": "Philippines",
+                  "lat": 14.6,
+                  "lon": 120.98
+                },
+                {
+                  "country": "France",
+                  "lat": 48.86,
+                  "lon": 2.35
+                },
+                {
+                  "country": "Germany",
+                  "lat": 52.52,
+                  "lon": 13.4
+                }
+              ]
+            },
+            "key": "country",
+            "fields": [
+              "lat",
+              "lon"
+            ]
+          }
+        },
+        {
+          "calculate": "-25.3",
+          "as": "aus_lat"
+        },
+        {
+          "calculate": "133.8",
+          "as": "aus_lon"
+        },
+        {
+          "calculate": "datum.measure === 'spend_in_aus' ? '$' + format(datum.value / 1000, ',.0f') + 'm' : format(datum.value, ',') + 'k'",
+          "as": "value_label"
+        },
+        {
+          "window": [
+            {
+              "op": "rank",
+              "as": "rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "value",
+              "order": "descending"
+            }
+          ]
+        }
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "color": "#5b2a86",
+            "opacity": 0.55,
+            "strokeCap": "round"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "longitude2": {
+              "field": "aus_lon"
+            },
+            "latitude2": {
+              "field": "aus_lat"
+            },
+            "strokeWidth": {
+              "field": "value",
+              "type": "quantitative",
+              "scale": {
+                "range": [
+                  1,
+                  10
+                ],
+                "zero": true
+              },
+              "legend": null
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "circle",
+            "color": "#5b2a86",
+            "opacity": 0.9,
+            "stroke": "white"
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "size": {
+              "field": "value",
+              "type": "quantitative",
+              "scale": {
+                "range": [
+                  30,
+                  600
+                ],
+                "zero": true
+              },
+              "legend": null
+            },
+            "tooltip": [
+              {
+                "field": "rank",
+                "title": "Rank"
+              },
+              {
+                "field": "country",
+                "title": "Country"
+              },
+              {
+                "field": "value_label",
+                "title": "Value"
+              }
+            ]
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "indexof(['Singapore','Korea','Malaysia','France'], datum.country) < 0"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#2a2530",
+            "dy": -12
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "country"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.country === 'Singapore'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#2a2530",
+            "dy": 14
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "country"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.country === 'Malaysia'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#2a2530",
+            "align": "right",
+            "dx": -8
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "country"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.country === 'Korea'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#2a2530",
+            "dy": 15
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "country"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.country === 'France'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 11,
+            "fontWeight": "bold",
+            "color": "#2a2530",
+            "align": "right",
+            "dx": -8,
+            "dy": 6
+          },
+          "encoding": {
+            "longitude": {
+              "field": "lon",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "lat",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "country"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lat": -25.3,
+            "lon": 133.8,
+            "label": "Australia"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "circle",
+            "size": 120,
+            "color": "#d9822b"
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": 16,
+            "fontSize": 12,
+            "fontWeight": "bold",
+            "color": "#d9822b"
+          },
+          "encoding": {
+            "text": {
+              "field": "label"
+            }
+          }
+        }
+      ],
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3, Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "background": "transparent"
+  }
+}

@@ -1,0 +1,6 @@
+traveller_type,year,visitors_000,nights_000,spend_in_aus_m,avg_spend_in_aus,total_trip_spend_m,avg_trip_spend,source
+All visitors,2025,20676,41336,17233,834,18849,912,"TRA Business events dashboard (DoTS & IVS), National, Jan-Dec 2025"
+Domestic overnight,2025,8508,26689,12016,1412,,,"TRA Business events dashboard (DoTS & IVS), National, Jan-Dec 2025"
+Domestic daytrips,2025,11437,,2878,252,,,"TRA Business events dashboard (DoTS & IVS), National, Jan-Dec 2025"
+International,2025,731,14647,2339,3202,3955,5414,"TRA Business events dashboard (DoTS & IVS), National, Jan-Dec 2025"
+International,2024,783,16389,2512,3207,4320,5516,"TRA Business events dashboard (DoTS & IVS), National, Jan-Dec 2024"

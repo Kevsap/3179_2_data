@@ -1,0 +1,2990 @@
+month,reason,arrivals
+1991-01,Business,13650
+1991-02,Business,18300
+1991-03,Business,18610
+1991-04,Business,20880
+1991-05,Business,17810
+1991-06,Business,18670
+1991-07,Business,18060
+1991-08,Business,18610
+1991-09,Business,17840
+1991-10,Business,22610
+1991-11,Business,23480
+1991-12,Business,13340
+1992-01,Business,13860
+1992-02,Business,22290
+1992-03,Business,24100
+1992-04,Business,18870
+1992-05,Business,21880
+1992-06,Business,17690
+1992-07,Business,18340
+1992-08,Business,20020
+1992-09,Business,19350
+1992-10,Business,21970
+1992-11,Business,25210
+1992-12,Business,12750
+1993-01,Business,15510
+1993-02,Business,23230
+1993-03,Business,25390
+1993-04,Business,20920
+1993-05,Business,22440
+1993-06,Business,19480
+1993-07,Business,20360
+1993-08,Business,23100
+1993-09,Business,22510
+1993-10,Business,28240
+1993-11,Business,31000
+1993-12,Business,16200
+1994-01,Business,19840
+1994-02,Business,29110
+1994-03,Business,31010
+1994-04,Business,28060
+1994-05,Business,28760
+1994-06,Business,25870
+1994-07,Business,27410
+1994-08,Business,26680
+1994-09,Business,25610
+1994-10,Business,29750
+1994-11,Business,32010
+1994-12,Business,17810
+1995-01,Business,21130
+1995-02,Business,29090
+1995-03,Business,33620
+1995-04,Business,26840
+1995-05,Business,29940
+1995-06,Business,25270
+1995-07,Business,33720
+1995-08,Business,40360
+1995-09,Business,28830
+1995-10,Business,33710
+1995-11,Business,36330
+1995-12,Business,22150
+1996-01,Business,27180
+1996-02,Business,31860
+1996-03,Business,37530
+1996-04,Business,31980
+1996-05,Business,32050
+1996-06,Business,32170
+1996-07,Business,32350
+1996-08,Business,32400
+1996-09,Business,32340
+1996-10,Business,38010
+1996-11,Business,39680
+1996-12,Business,24400
+1997-01,Business,28670
+1997-02,Business,38430
+1997-03,Business,37810
+1997-04,Business,38020
+1997-05,Business,38230
+1997-06,Business,33830
+1997-07,Business,36300
+1997-08,Business,36720
+1997-09,Business,37150
+1997-10,Business,39420
+1997-11,Business,43320
+1997-12,Business,28190
+1998-01,Business,30550
+1998-02,Business,40520
+1998-03,Business,44580
+1998-04,Business,35480
+1998-05,Business,39530
+1998-06,Business,34440
+1998-07,Business,32780
+1998-08,Business,34010
+1998-09,Business,28620
+1998-10,Business,41040
+1998-11,Business,42160
+1998-12,Business,26640
+1999-01,Business,31760
+1999-02,Business,38850
+1999-03,Business,40280
+1999-04,Business,34540
+1999-05,Business,42300
+1999-06,Business,33820
+1999-07,Business,35720
+1999-08,Business,37990
+1999-09,Business,36580
+1999-10,Business,37920
+1999-11,Business,44230
+1999-12,Business,26960
+2000-01,Business,29620
+2000-02,Business,41700
+2000-03,Business,45380
+2000-04,Business,38330
+2000-05,Business,44660
+2000-06,Business,39780
+2000-07,Business,42970
+2000-08,Business,39910
+2000-09,Business,41510
+2000-10,Business,45800
+2000-11,Business,46620
+2000-12,Business,28220
+2001-01,Business,31650
+2001-02,Business,43240
+2001-03,Business,42100
+2001-04,Business,35970
+2001-05,Business,38820
+2001-06,Business,33280
+2001-07,Business,37060
+2001-08,Business,38810
+2001-09,Business,30620
+2001-10,Business,38520
+2001-11,Business,37730
+2001-12,Business,26670
+2002-01,Business,30370
+2002-02,Business,37730
+2002-03,Business,39030
+2002-04,Business,40130
+2002-05,Business,39060
+2002-06,Business,33390
+2002-07,Business,36490
+2002-08,Business,34330
+2002-09,Business,35910
+2002-10,Business,42190
+2002-11,Business,44770
+2002-12,Business,29050
+2003-01,Business,32370
+2003-02,Business,40690
+2003-03,Business,40700
+2003-04,Business,27220
+2003-05,Business,33890
+2003-06,Business,32030
+2003-07,Business,36600
+2003-08,Business,38650
+2003-09,Business,40410
+2003-10,Business,45220
+2003-11,Business,49380
+2003-12,Business,30310
+2004-01,Business,32090
+2004-02,Business,48190
+2004-03,Business,48990
+2004-04,Business,35170
+2004-05,Business,44770
+2004-06,Business,37700
+2004-07,Business,40460
+2004-08,Business,46310
+2004-09,Business,42450
+2004-10,Business,46970
+2004-11,Business,53560
+2004-12,Business,32710
+2005-01,Business,36900
+2005-02,Business,45200
+2005-03,Business,45330
+2005-04,Business,43470
+2005-05,Business,48170
+2005-06,Business,41850
+2005-07,Business,45170
+2005-08,Business,47890
+2005-09,Business,44640
+2005-10,Business,50010
+2005-11,Business,56410
+2005-12,Business,33740
+2006-01,Business,38710
+2006-02,Business,51440
+2006-03,Business,53620
+2006-04,Business,43620
+2006-05,Business,50290
+2006-06,Business,43670
+2006-07,Business,49440
+2006-08,Business,49360
+2006-09,Business,46520
+2006-10,Business,53610
+2006-11,Business,58930
+2006-12,Business,34530
+2007-01,Business,43580
+2007-02,Business,51610
+2007-03,Business,60480
+2007-04,Business,47960
+2007-05,Business,53500
+2007-06,Business,48240
+2007-07,Business,49960
+2007-08,Business,52970
+2007-09,Business,50500
+2007-10,Business,57530
+2007-11,Business,57150
+2007-12,Business,35600
+2008-01,Business,42270
+2008-02,Business,59610
+2008-03,Business,57040
+2008-04,Business,60040
+2008-05,Business,52910
+2008-06,Business,47910
+2008-07,Business,51890
+2008-08,Business,50660
+2008-09,Business,48080
+2008-10,Business,54720
+2008-11,Business,54320
+2008-12,Business,31150
+2009-01,Business,34080
+2009-02,Business,47890
+2009-03,Business,54170
+2009-04,Business,39360
+2009-05,Business,43580
+2009-06,Business,41940
+2009-07,Business,44110
+2009-08,Business,45770
+2009-09,Business,44650
+2009-10,Business,48930
+2009-11,Business,56660
+2009-12,Business,32060
+2010-01,Business,40930
+2010-02,Business,54210
+2010-03,Business,58740
+2010-04,Business,47370
+2010-05,Business,56420
+2010-06,Business,46650
+2010-07,Business,49020
+2010-08,Business,53230
+2010-09,Business,49810
+2010-10,Business,56630
+2010-11,Business,62930
+2010-12,Business,37860
+2011-01,Business,50490
+2011-02,Business,59250
+2011-03,Business,62370
+2011-04,Business,44810
+2011-05,Business,60880
+2011-06,Business,49610
+2011-07,Business,54510
+2011-08,Business,53480
+2011-09,Business,52050
+2011-10,Business,58060
+2011-11,Business,69710
+2011-12,Business,35240
+2012-01,Business,42530
+2012-02,Business,63410
+2012-03,Business,58770
+2012-04,Business,50080
+2012-05,Business,60830
+2012-06,Business,48800
+2012-07,Business,51900
+2012-08,Business,52650
+2012-09,Business,55630
+2012-10,Business,63030
+2012-11,Business,62620
+2012-12,Business,38680
+2013-01,Business,43210
+2013-02,Business,58660
+2013-03,Business,57370
+2013-04,Business,56390
+2013-05,Business,56760
+2013-06,Business,49460
+2013-07,Business,55270
+2013-08,Business,49780
+2013-09,Business,52860
+2013-10,Business,56660
+2013-11,Business,62880
+2013-12,Business,39600
+2014-01,Business,41160
+2014-02,Business,57830
+2014-03,Business,62320
+2014-04,Business,45660
+2014-05,Business,57110
+2014-06,Business,51000
+2014-07,Business,47980
+2014-08,Business,53840
+2014-09,Business,50790
+2014-10,Business,59430
+2014-11,Business,63480
+2014-12,Business,35350
+2015-01,Business,41600
+2015-02,Business,54030
+2015-03,Business,59860
+2015-04,Business,49390
+2015-05,Business,55750
+2015-06,Business,48210
+2015-07,Business,46810
+2015-08,Business,49440
+2015-09,Business,48450
+2015-10,Business,53900
+2015-11,Business,62730
+2015-12,Business,31830
+2016-01,Business,39190
+2016-02,Business,57490
+2016-03,Business,56020
+2016-04,Business,52050
+2016-05,Business,56800
+2016-06,Business,47980
+2016-07,Business,49320
+2016-08,Business,51810
+2016-09,Business,48700
+2016-10,Business,56420
+2016-11,Business,64000
+2016-12,Business,32230
+2017-01,Business,40370
+2017-02,Business,59250
+2017-03,Business,62390
+2017-04,Business,45810
+2017-05,Business,57500
+2017-06,Business,50640
+2017-07,Business,55120
+2017-08,Business,56940
+2017-09,Business,55240
+2017-10,Business,67220
+2017-11,Business,71630
+2017-12,Business,37750
+2018-01,Business,47260
+2018-02,Business,63320
+2018-03,Business,65370
+2018-04,Business,58330
+2018-05,Business,61860
+2018-06,Business,51100
+2018-07,Business,56980
+2018-08,Business,58590
+2018-09,Business,59790
+2018-10,Business,64580
+2018-11,Business,66360
+2018-12,Business,38880
+2019-01,Business,47770
+2019-02,Business,62460
+2019-03,Business,69040
+2019-04,Business,48090
+2019-05,Business,58440
+2019-06,Business,53300
+2019-07,Business,56030
+2019-08,Business,54620
+2019-09,Business,58220
+2019-10,Business,62290
+2019-11,Business,67070
+2019-12,Business,38460
+2020-01,Business,40320
+2020-02,Business,53460
+2020-03,Business,21920
+2020-04,Business,150
+2020-05,Business,300
+2020-06,Business,530
+2020-07,Business,420
+2020-08,Business,410
+2020-09,Business,530
+2020-10,Business,910
+2020-11,Business,840
+2020-12,Business,580
+2021-01,Business,1330
+2021-02,Business,910
+2021-03,Business,1100
+2021-04,Business,2230
+2021-05,Business,5070
+2021-06,Business,3900
+2021-07,Business,1450
+2021-08,Business,710
+2021-09,Business,500
+2021-10,Business,550
+2021-11,Business,1350
+2021-12,Business,1830
+2022-01,Business,2550
+2022-02,Business,4840
+2022-03,Business,14310
+2022-04,Business,16120
+2022-05,Business,26470
+2022-06,Business,22710
+2022-07,Business,24060
+2022-08,Business,29190
+2022-09,Business,29650
+2022-10,Business,35400
+2022-11,Business,42410
+2022-12,Business,19700
+2023-01,Business,21480
+2023-02,Business,40750
+2023-03,Business,46850
+2023-04,Business,30890
+2023-05,Business,41850
+2023-06,Business,35900
+2023-07,Business,40370
+2023-08,Business,36100
+2023-09,Business,35510
+2023-10,Business,44810
+2023-11,Business,47450
+2023-12,Business,23460
+2024-01,Business,28050
+2024-02,Business,44180
+2024-03,Business,43920
+2024-04,Business,39240
+2024-05,Business,44380
+2024-06,Business,35350
+2024-07,Business,35560
+2024-08,Business,38470
+2024-09,Business,41330
+2024-10,Business,45050
+2024-11,Business,49650
+2024-12,Business,25460
+2025-01,Business,25920
+2025-02,Business,45970
+2025-03,Business,50970
+2025-04,Business,31530
+2025-05,Business,42950
+2025-06,Business,37100
+2025-07,Business,37480
+2025-08,Business,41240
+2025-09,Business,42710
+2025-10,Business,47510
+2025-11,Business,58530
+2025-12,Business,24280
+2026-01,Business,29240
+2026-02,Business,47900
+2026-03,Business,48810
+2026-04,Business,35130
+2026-05,Business,44000
+2026-06,Business,37380
+2026-07,Business,36940
+1991-01,Convention/conference,1730
+1991-02,Convention/conference,3670
+1991-03,Convention/conference,1990
+1991-04,Convention/conference,2140
+1991-05,Convention/conference,2870
+1991-06,Convention/conference,10450
+1991-07,Convention/conference,3620
+1991-08,Convention/conference,2460
+1991-09,Convention/conference,3640
+1991-10,Convention/conference,3290
+1991-11,Convention/conference,4620
+1991-12,Convention/conference,2290
+1992-01,Convention/conference,1410
+1992-02,Convention/conference,2360
+1992-03,Convention/conference,3360
+1992-04,Convention/conference,2520
+1992-05,Convention/conference,2900
+1992-06,Convention/conference,1530
+1992-07,Convention/conference,3300
+1992-08,Convention/conference,2810
+1992-09,Convention/conference,3840
+1992-10,Convention/conference,3250
+1992-11,Convention/conference,3380
+1992-12,Convention/conference,1670
+1993-01,Convention/conference,1640
+1993-02,Convention/conference,3480
+1993-03,Convention/conference,3160
+1993-04,Convention/conference,4360
+1993-05,Convention/conference,11050
+1993-06,Convention/conference,2450
+1993-07,Convention/conference,4330
+1993-08,Convention/conference,2040
+1993-09,Convention/conference,7000
+1993-10,Convention/conference,4030
+1993-11,Convention/conference,4420
+1993-12,Convention/conference,2240
+1994-01,Convention/conference,1620
+1994-02,Convention/conference,3950
+1994-03,Convention/conference,5890
+1994-04,Convention/conference,5230
+1994-05,Convention/conference,2860
+1994-06,Convention/conference,3070
+1994-07,Convention/conference,5000
+1994-08,Convention/conference,3360
+1994-09,Convention/conference,10960
+1994-10,Convention/conference,10820
+1994-11,Convention/conference,8750
+1994-12,Convention/conference,3420
+1995-01,Convention/conference,3070
+1995-02,Convention/conference,8600
+1995-03,Convention/conference,7560
+1995-04,Convention/conference,5580
+1995-05,Convention/conference,6780
+1995-06,Convention/conference,6590
+1995-07,Convention/conference,9530
+1995-08,Convention/conference,7870
+1995-09,Convention/conference,9450
+1995-10,Convention/conference,12150
+1995-11,Convention/conference,9460
+1995-12,Convention/conference,3070
+1996-01,Convention/conference,4290
+1996-02,Convention/conference,8080
+1996-03,Convention/conference,9210
+1996-04,Convention/conference,13040
+1996-05,Convention/conference,7800
+1996-06,Convention/conference,9250
+1996-07,Convention/conference,10340
+1996-08,Convention/conference,9130
+1996-09,Convention/conference,12330
+1996-10,Convention/conference,12480
+1996-11,Convention/conference,12830
+1996-12,Convention/conference,4110
+1997-01,Convention/conference,5450
+1997-02,Convention/conference,6290
+1997-03,Convention/conference,10300
+1997-04,Convention/conference,8720
+1997-05,Convention/conference,9580
+1997-06,Convention/conference,13790
+1997-07,Convention/conference,11590
+1997-08,Convention/conference,7950
+1997-09,Convention/conference,11220
+1997-10,Convention/conference,11720
+1997-11,Convention/conference,12530
+1997-12,Convention/conference,3500
+1998-01,Convention/conference,4450
+1998-02,Convention/conference,6690
+1998-03,Convention/conference,8760
+1998-04,Convention/conference,7560
+1998-05,Convention/conference,8710
+1998-06,Convention/conference,5200
+1998-07,Convention/conference,10530
+1998-08,Convention/conference,7450
+1998-09,Convention/conference,11080
+1998-10,Convention/conference,15770
+1998-11,Convention/conference,11480
+1998-12,Convention/conference,3960
+1999-01,Convention/conference,4650
+1999-02,Convention/conference,6720
+1999-03,Convention/conference,9150
+1999-04,Convention/conference,13610
+1999-05,Convention/conference,9500
+1999-06,Convention/conference,4960
+1999-07,Convention/conference,10620
+1999-08,Convention/conference,9260
+1999-09,Convention/conference,11470
+1999-10,Convention/conference,12150
+1999-11,Convention/conference,11380
+1999-12,Convention/conference,3600
+2000-01,Convention/conference,6500
+2000-02,Convention/conference,8430
+2000-03,Convention/conference,10390
+2000-04,Convention/conference,11100
+2000-05,Convention/conference,11590
+2000-06,Convention/conference,9760
+2000-07,Convention/conference,12930
+2000-08,Convention/conference,8750
+2000-09,Convention/conference,12810
+2000-10,Convention/conference,17380
+2000-11,Convention/conference,17460
+2000-12,Convention/conference,8950
+2001-01,Convention/conference,6090
+2001-02,Convention/conference,9060
+2001-03,Convention/conference,13460
+2001-04,Convention/conference,12230
+2001-05,Convention/conference,13110
+2001-06,Convention/conference,8800
+2001-07,Convention/conference,14740
+2001-08,Convention/conference,8300
+2001-09,Convention/conference,16840
+2001-10,Convention/conference,14070
+2001-11,Convention/conference,11020
+2001-12,Convention/conference,7910
+2002-01,Convention/conference,4910
+2002-02,Convention/conference,8640
+2002-03,Convention/conference,10010
+2002-04,Convention/conference,15730
+2002-05,Convention/conference,15250
+2002-06,Convention/conference,7270
+2002-07,Convention/conference,13950
+2002-08,Convention/conference,9160
+2002-09,Convention/conference,13850
+2002-10,Convention/conference,14190
+2002-11,Convention/conference,11970
+2002-12,Convention/conference,5000
+2003-01,Convention/conference,5540
+2003-02,Convention/conference,9450
+2003-03,Convention/conference,11070
+2003-04,Convention/conference,8280
+2003-05,Convention/conference,14800
+2003-06,Convention/conference,8750
+2003-07,Convention/conference,17280
+2003-08,Convention/conference,14470
+2003-09,Convention/conference,18260
+2003-10,Convention/conference,12380
+2003-11,Convention/conference,13670
+2003-12,Convention/conference,8580
+2004-01,Convention/conference,4720
+2004-02,Convention/conference,12110
+2004-03,Convention/conference,13140
+2004-04,Convention/conference,10720
+2004-05,Convention/conference,12620
+2004-06,Convention/conference,10340
+2004-07,Convention/conference,15770
+2004-08,Convention/conference,17020
+2004-09,Convention/conference,18140
+2004-10,Convention/conference,16920
+2004-11,Convention/conference,17700
+2004-12,Convention/conference,7760
+2005-01,Convention/conference,14080
+2005-02,Convention/conference,11360
+2005-03,Convention/conference,15520
+2005-04,Convention/conference,13440
+2005-05,Convention/conference,14550
+2005-06,Convention/conference,10250
+2005-07,Convention/conference,16150
+2005-08,Convention/conference,22740
+2005-09,Convention/conference,18690
+2005-10,Convention/conference,16290
+2005-11,Convention/conference,22860
+2005-12,Convention/conference,6770
+2006-01,Convention/conference,6980
+2006-02,Convention/conference,14020
+2006-03,Convention/conference,13730
+2006-04,Convention/conference,12580
+2006-05,Convention/conference,14090
+2006-06,Convention/conference,16590
+2006-07,Convention/conference,19660
+2006-08,Convention/conference,19900
+2006-09,Convention/conference,20070
+2006-10,Convention/conference,20790
+2006-11,Convention/conference,15660
+2006-12,Convention/conference,8920
+2007-01,Convention/conference,10210
+2007-02,Convention/conference,11870
+2007-03,Convention/conference,24300
+2007-04,Convention/conference,15130
+2007-05,Convention/conference,14930
+2007-06,Convention/conference,15800
+2007-07,Convention/conference,21760
+2007-08,Convention/conference,17830
+2007-09,Convention/conference,21930
+2007-10,Convention/conference,19930
+2007-11,Convention/conference,21490
+2007-12,Convention/conference,7940
+2008-01,Convention/conference,9850
+2008-02,Convention/conference,17140
+2008-03,Convention/conference,16570
+2008-04,Convention/conference,14690
+2008-05,Convention/conference,16070
+2008-06,Convention/conference,13890
+2008-07,Convention/conference,39090
+2008-08,Convention/conference,17790
+2008-09,Convention/conference,17060
+2008-10,Convention/conference,18090
+2008-11,Convention/conference,15060
+2008-12,Convention/conference,8970
+2009-01,Convention/conference,7020
+2009-02,Convention/conference,11960
+2009-03,Convention/conference,12800
+2009-04,Convention/conference,9700
+2009-05,Convention/conference,12330
+2009-06,Convention/conference,11190
+2009-07,Convention/conference,15870
+2009-08,Convention/conference,17350
+2009-09,Convention/conference,15630
+2009-10,Convention/conference,16820
+2009-11,Convention/conference,16750
+2009-12,Convention/conference,9660
+2010-01,Convention/conference,7350
+2010-02,Convention/conference,14010
+2010-03,Convention/conference,14290
+2010-04,Convention/conference,14650
+2010-05,Convention/conference,14780
+2010-06,Convention/conference,18920
+2010-07,Convention/conference,20110
+2010-08,Convention/conference,17750
+2010-09,Convention/conference,18840
+2010-10,Convention/conference,17530
+2010-11,Convention/conference,20330
+2010-12,Convention/conference,8830
+2011-01,Convention/conference,7530
+2011-02,Convention/conference,14030
+2011-03,Convention/conference,17490
+2011-04,Convention/conference,12090
+2011-05,Convention/conference,15130
+2011-06,Convention/conference,13070
+2011-07,Convention/conference,19310
+2011-08,Convention/conference,16780
+2011-09,Convention/conference,18370
+2011-10,Convention/conference,22330
+2011-11,Convention/conference,22050
+2011-12,Convention/conference,7940
+2012-01,Convention/conference,9290
+2012-02,Convention/conference,16420
+2012-03,Convention/conference,16790
+2012-04,Convention/conference,13220
+2012-05,Convention/conference,20320
+2012-06,Convention/conference,14440
+2012-07,Convention/conference,19010
+2012-08,Convention/conference,20980
+2012-09,Convention/conference,23530
+2012-10,Convention/conference,21610
+2012-11,Convention/conference,19770
+2012-12,Convention/conference,11190
+2013-01,Convention/conference,7700
+2013-02,Convention/conference,14240
+2013-03,Convention/conference,13140
+2013-04,Convention/conference,15630
+2013-05,Convention/conference,18670
+2013-06,Convention/conference,16330
+2013-07,Convention/conference,15850
+2013-08,Convention/conference,19130
+2013-09,Convention/conference,17640
+2013-10,Convention/conference,21140
+2013-11,Convention/conference,19140
+2013-12,Convention/conference,14680
+2014-01,Convention/conference,7780
+2014-02,Convention/conference,13110
+2014-03,Convention/conference,17610
+2014-04,Convention/conference,12760
+2014-05,Convention/conference,27630
+2014-06,Convention/conference,16560
+2014-07,Convention/conference,24700
+2014-08,Convention/conference,21020
+2014-09,Convention/conference,22520
+2014-10,Convention/conference,22750
+2014-11,Convention/conference,29430
+2014-12,Convention/conference,9840
+2015-01,Convention/conference,10930
+2015-02,Convention/conference,14450
+2015-03,Convention/conference,16540
+2015-04,Convention/conference,17560
+2015-05,Convention/conference,18300
+2015-06,Convention/conference,16130
+2015-07,Convention/conference,15380
+2015-08,Convention/conference,17850
+2015-09,Convention/conference,20130
+2015-10,Convention/conference,23390
+2015-11,Convention/conference,23080
+2015-12,Convention/conference,7490
+2016-01,Convention/conference,9380
+2016-02,Convention/conference,16920
+2016-03,Convention/conference,16210
+2016-04,Convention/conference,19490
+2016-05,Convention/conference,17020
+2016-06,Convention/conference,13890
+2016-07,Convention/conference,18530
+2016-08,Convention/conference,16840
+2016-09,Convention/conference,22680
+2016-10,Convention/conference,21890
+2016-11,Convention/conference,21860
+2016-12,Convention/conference,11030
+2017-01,Convention/conference,16160
+2017-02,Convention/conference,18090
+2017-03,Convention/conference,19510
+2017-04,Convention/conference,16980
+2017-05,Convention/conference,20520
+2017-06,Convention/conference,17680
+2017-07,Convention/conference,25890
+2017-08,Convention/conference,28310
+2017-09,Convention/conference,28350
+2017-10,Convention/conference,31730
+2017-11,Convention/conference,29200
+2017-12,Convention/conference,14600
+2018-01,Convention/conference,13310
+2018-02,Convention/conference,19980
+2018-03,Convention/conference,24040
+2018-04,Convention/conference,23070
+2018-05,Convention/conference,32240
+2018-06,Convention/conference,21630
+2018-07,Convention/conference,28520
+2018-08,Convention/conference,25450
+2018-09,Convention/conference,31780
+2018-10,Convention/conference,35350
+2018-11,Convention/conference,33200
+2018-12,Convention/conference,14990
+2019-01,Convention/conference,13520
+2019-02,Convention/conference,22530
+2019-03,Convention/conference,29750
+2019-04,Convention/conference,21570
+2019-05,Convention/conference,30390
+2019-06,Convention/conference,23860
+2019-07,Convention/conference,29110
+2019-08,Convention/conference,33330
+2019-09,Convention/conference,32570
+2019-10,Convention/conference,35230
+2019-11,Convention/conference,40100
+2019-12,Convention/conference,17700
+2020-01,Convention/conference,11690
+2020-02,Convention/conference,19260
+2020-03,Convention/conference,6950
+2020-04,Convention/conference,0
+2020-05,Convention/conference,10
+2020-06,Convention/conference,20
+2020-07,Convention/conference,10
+2020-08,Convention/conference,10
+2020-09,Convention/conference,10
+2020-10,Convention/conference,30
+2020-11,Convention/conference,20
+2020-12,Convention/conference,40
+2021-01,Convention/conference,40
+2021-02,Convention/conference,20
+2021-03,Convention/conference,50
+2021-04,Convention/conference,110
+2021-05,Convention/conference,560
+2021-06,Convention/conference,400
+2021-07,Convention/conference,70
+2021-08,Convention/conference,20
+2021-09,Convention/conference,10
+2021-10,Convention/conference,0
+2021-11,Convention/conference,190
+2021-12,Convention/conference,450
+2022-01,Convention/conference,470
+2022-02,Convention/conference,920
+2022-03,Convention/conference,2640
+2022-04,Convention/conference,3280
+2022-05,Convention/conference,9200
+2022-06,Convention/conference,7740
+2022-07,Convention/conference,8860
+2022-08,Convention/conference,17080
+2022-09,Convention/conference,17030
+2022-10,Convention/conference,18660
+2022-11,Convention/conference,22050
+2022-12,Convention/conference,11900
+2023-01,Convention/conference,11570
+2023-02,Convention/conference,16740
+2023-03,Convention/conference,19930
+2023-04,Convention/conference,12690
+2023-05,Convention/conference,28260
+2023-06,Convention/conference,19930
+2023-07,Convention/conference,22850
+2023-08,Convention/conference,22290
+2023-09,Convention/conference,23570
+2023-10,Convention/conference,28730
+2023-11,Convention/conference,23530
+2023-12,Convention/conference,12460
+2024-01,Convention/conference,7210
+2024-02,Convention/conference,17790
+2024-03,Convention/conference,19610
+2024-04,Convention/conference,15030
+2024-05,Convention/conference,23830
+2024-06,Convention/conference,27720
+2024-07,Convention/conference,18640
+2024-08,Convention/conference,21250
+2024-09,Convention/conference,30500
+2024-10,Convention/conference,28830
+2024-11,Convention/conference,29010
+2024-12,Convention/conference,13490
+2025-01,Convention/conference,6830
+2025-02,Convention/conference,19470
+2025-03,Convention/conference,20880
+2025-04,Convention/conference,27920
+2025-05,Convention/conference,23380
+2025-06,Convention/conference,22900
+2025-07,Convention/conference,23120
+2025-08,Convention/conference,25020
+2025-09,Convention/conference,31610
+2025-10,Convention/conference,28170
+2025-11,Convention/conference,34350
+2025-12,Convention/conference,12880
+2026-01,Convention/conference,23010
+2026-02,Convention/conference,18780
+2026-03,Convention/conference,19200
+2026-04,Convention/conference,16950
+2026-05,Convention/conference,23330
+2026-06,Convention/conference,18150
+2026-07,Convention/conference,21850
+1991-01,Education,9860
+1991-02,Education,10890
+1991-03,Education,3690
+1991-04,Education,4190
+1991-05,Education,2830
+1991-06,Education,3270
+1991-07,Education,7380
+1991-08,Education,3860
+1991-09,Education,4000
+1991-10,Education,3510
+1991-11,Education,1990
+1991-12,Education,1970
+1992-01,Education,10020
+1992-02,Education,13500
+1992-03,Education,3060
+1992-04,Education,4700
+1992-05,Education,2610
+1992-06,Education,2920
+1992-07,Education,10200
+1992-08,Education,3280
+1992-09,Education,2950
+1992-10,Education,3930
+1992-11,Education,1960
+1992-12,Education,2200
+1993-01,Education,10330
+1993-02,Education,14870
+1993-03,Education,2850
+1993-04,Education,4360
+1993-05,Education,2680
+1993-06,Education,3330
+1993-07,Education,12790
+1993-08,Education,3720
+1993-09,Education,3660
+1993-10,Education,5400
+1993-11,Education,2510
+1993-12,Education,2220
+1994-01,Education,13140
+1994-02,Education,16600
+1994-03,Education,3800
+1994-04,Education,6600
+1994-05,Education,3460
+1994-06,Education,4570
+1994-07,Education,15380
+1994-08,Education,3930
+1994-09,Education,4420
+1994-10,Education,6380
+1994-11,Education,2640
+1994-12,Education,2460
+1995-01,Education,12350
+1995-02,Education,20420
+1995-03,Education,4210
+1995-04,Education,6800
+1995-05,Education,3800
+1995-06,Education,5780
+1995-07,Education,19620
+1995-08,Education,4550
+1995-09,Education,5540
+1995-10,Education,7640
+1995-11,Education,3570
+1995-12,Education,3500
+1996-01,Education,19590
+1996-02,Education,24090
+1996-03,Education,9060
+1996-04,Education,9330
+1996-05,Education,4650
+1996-06,Education,7190
+1996-07,Education,25930
+1996-08,Education,6470
+1996-09,Education,6710
+1996-10,Education,8870
+1996-11,Education,4850
+1996-12,Education,4310
+1997-01,Education,23070
+1997-02,Education,26850
+1997-03,Education,10140
+1997-04,Education,9650
+1997-05,Education,5110
+1997-06,Education,8000
+1997-07,Education,29450
+1997-08,Education,7550
+1997-09,Education,6680
+1997-10,Education,9220
+1997-11,Education,4230
+1997-12,Education,3560
+1998-01,Education,17800
+1998-02,Education,30320
+1998-03,Education,7640
+1998-04,Education,8360
+1998-05,Education,4900
+1998-06,Education,7420
+1998-07,Education,25460
+1998-08,Education,7660
+1998-09,Education,6040
+1998-10,Education,9450
+1998-11,Education,4950
+1998-12,Education,4780
+1999-01,Education,21890
+1999-02,Education,29320
+1999-03,Education,8370
+1999-04,Education,9440
+1999-05,Education,6620
+1999-06,Education,9670
+1999-07,Education,29290
+1999-08,Education,7520
+1999-09,Education,7510
+1999-10,Education,10810
+1999-11,Education,5800
+1999-12,Education,6490
+2000-01,Education,22870
+2000-02,Education,33240
+2000-03,Education,9140
+2000-04,Education,9840
+2000-05,Education,9100
+2000-06,Education,11530
+2000-07,Education,34570
+2000-08,Education,8280
+2000-09,Education,11530
+2000-10,Education,14650
+2000-11,Education,7770
+2000-12,Education,7760
+2001-01,Education,26570
+2001-02,Education,39980
+2001-03,Education,13460
+2001-04,Education,13620
+2001-05,Education,7700
+2001-06,Education,15760
+2001-07,Education,42220
+2001-08,Education,11730
+2001-09,Education,10510
+2001-10,Education,13350
+2001-11,Education,6950
+2001-12,Education,7780
+2002-01,Education,29120
+2002-02,Education,36960
+2002-03,Education,16450
+2002-04,Education,13170
+2002-05,Education,9190
+2002-06,Education,14150
+2002-07,Education,44900
+2002-08,Education,13720
+2002-09,Education,11080
+2002-10,Education,14830
+2002-11,Education,8490
+2002-12,Education,6880
+2003-01,Education,30040
+2003-02,Education,45450
+2003-03,Education,17260
+2003-04,Education,9780
+2003-05,Education,7950
+2003-06,Education,12480
+2003-07,Education,42030
+2003-08,Education,13960
+2003-09,Education,12940
+2003-10,Education,15950
+2003-11,Education,9690
+2003-12,Education,8130
+2004-01,Education,34900
+2004-02,Education,51970
+2004-03,Education,17260
+2004-04,Education,16430
+2004-05,Education,10100
+2004-06,Education,16420
+2004-07,Education,53030
+2004-08,Education,15700
+2004-09,Education,12210
+2004-10,Education,15900
+2004-11,Education,9850
+2004-12,Education,9300
+2005-01,Education,38530
+2005-02,Education,54010
+2005-03,Education,17710
+2005-04,Education,15380
+2005-05,Education,10460
+2005-06,Education,15830
+2005-07,Education,57580
+2005-08,Education,16270
+2005-09,Education,14670
+2005-10,Education,15130
+2005-11,Education,11400
+2005-12,Education,11140
+2006-01,Education,35310
+2006-02,Education,60850
+2006-03,Education,18180
+2006-04,Education,16100
+2006-05,Education,11250
+2006-06,Education,18070
+2006-07,Education,57840
+2006-08,Education,17110
+2006-09,Education,14730
+2006-10,Education,16440
+2006-11,Education,12980
+2006-12,Education,11420
+2007-01,Education,40490
+2007-02,Education,54750
+2007-03,Education,24640
+2007-04,Education,18020
+2007-05,Education,12630
+2007-06,Education,20320
+2007-07,Education,57910
+2007-08,Education,18160
+2007-09,Education,15700
+2007-10,Education,16880
+2007-11,Education,13440
+2007-12,Education,11730
+2008-01,Education,41070
+2008-02,Education,61420
+2008-03,Education,26940
+2008-04,Education,15970
+2008-05,Education,11770
+2008-06,Education,17510
+2008-07,Education,58030
+2008-08,Education,21150
+2008-09,Education,14000
+2008-10,Education,18260
+2008-11,Education,12970
+2008-12,Education,11900
+2009-01,Education,41330
+2009-02,Education,68430
+2009-03,Education,27750
+2009-04,Education,20440
+2009-05,Education,13620
+2009-06,Education,18740
+2009-07,Education,61040
+2009-08,Education,21300
+2009-09,Education,16820
+2009-10,Education,21340
+2009-11,Education,15590
+2009-12,Education,13940
+2010-01,Education,46970
+2010-02,Education,73170
+2010-03,Education,31690
+2010-04,Education,19250
+2010-05,Education,13240
+2010-06,Education,20170
+2010-07,Education,69080
+2010-08,Education,23940
+2010-09,Education,17870
+2010-10,Education,19840
+2010-11,Education,15980
+2010-12,Education,14260
+2011-01,Education,42520
+2011-02,Education,85710
+2011-03,Education,29290
+2011-04,Education,16610
+2011-05,Education,18470
+2011-06,Education,18160
+2011-07,Education,67120
+2011-08,Education,23350
+2011-09,Education,18440
+2011-10,Education,20180
+2011-11,Education,15590
+2011-12,Education,15030
+2012-01,Education,40730
+2012-02,Education,85710
+2012-03,Education,27950
+2012-04,Education,19930
+2012-05,Education,13310
+2012-06,Education,19240
+2012-07,Education,68520
+2012-08,Education,25030
+2012-09,Education,19970
+2012-10,Education,18760
+2012-11,Education,15990
+2012-12,Education,15760
+2013-01,Education,42550
+2013-02,Education,74540
+2013-03,Education,33520
+2013-04,Education,21560
+2013-05,Education,15020
+2013-06,Education,19960
+2013-07,Education,68010
+2013-08,Education,27090
+2013-09,Education,17760
+2013-10,Education,21920
+2013-11,Education,16770
+2013-12,Education,14040
+2014-01,Education,37670
+2014-02,Education,75410
+2014-03,Education,31760
+2014-04,Education,19770
+2014-05,Education,15660
+2014-06,Education,19060
+2014-07,Education,67650
+2014-08,Education,30070
+2014-09,Education,18230
+2014-10,Education,26270
+2014-11,Education,20380
+2014-12,Education,18100
+2015-01,Education,47760
+2015-02,Education,73800
+2015-03,Education,42940
+2015-04,Education,26290
+2015-05,Education,18910
+2015-06,Education,25460
+2015-07,Education,84530
+2015-08,Education,34850
+2015-09,Education,20420
+2015-10,Education,27720
+2015-11,Education,29880
+2015-12,Education,26960
+2016-01,Education,52540
+2016-02,Education,94110
+2016-03,Education,36620
+2016-04,Education,27080
+2016-05,Education,19350
+2016-06,Education,24990
+2016-07,Education,97020
+2016-08,Education,31590
+2016-09,Education,26920
+2016-10,Education,41090
+2016-11,Education,23220
+2016-12,Education,27030
+2017-01,Education,58920
+2017-02,Education,120330
+2017-03,Education,41180
+2017-04,Education,34890
+2017-05,Education,21630
+2017-06,Education,28790
+2017-07,Education,107400
+2017-08,Education,35080
+2017-09,Education,27660
+2017-10,Education,36520
+2017-11,Education,23840
+2017-12,Education,23820
+2018-01,Education,68400
+2018-02,Education,111350
+2018-03,Education,49290
+2018-04,Education,38890
+2018-05,Education,23610
+2018-06,Education,31790
+2018-07,Education,118840
+2018-08,Education,38520
+2018-09,Education,31580
+2018-10,Education,36100
+2018-11,Education,26370
+2018-12,Education,25810
+2019-01,Education,65240
+2019-02,Education,121260
+2019-03,Education,52260
+2019-04,Education,32900
+2019-05,Education,28090
+2019-06,Education,35040
+2019-07,Education,108020
+2019-08,Education,48400
+2019-09,Education,34860
+2019-10,Education,40030
+2019-11,Education,27160
+2019-12,Education,27160
+2020-01,Education,66180
+2020-02,Education,72520
+2020-03,Education,40680
+2020-04,Education,30
+2020-05,Education,60
+2020-06,Education,90
+2020-07,Education,100
+2020-08,Education,70
+2020-09,Education,100
+2020-10,Education,140
+2020-11,Education,90
+2020-12,Education,200
+2021-01,Education,450
+2021-02,Education,440
+2021-03,Education,220
+2021-04,Education,210
+2021-05,Education,340
+2021-06,Education,320
+2021-07,Education,490
+2021-08,Education,140
+2021-09,Education,60
+2021-10,Education,80
+2021-11,Education,240
+2021-12,Education,5410
+2022-01,Education,8810
+2022-02,Education,18390
+2022-03,Education,11190
+2022-04,Education,9510
+2022-05,Education,11700
+2022-06,Education,13900
+2022-07,Education,36760
+2022-08,Education,20940
+2022-09,Education,18860
+2022-10,Education,16290
+2022-11,Education,16730
+2022-12,Education,16800
+2023-01,Education,30920
+2023-02,Education,74340
+2023-03,Education,28520
+2023-04,Education,25220
+2023-05,Education,24460
+2023-06,Education,24920
+2023-07,Education,75610
+2023-08,Education,33650
+2023-09,Education,28290
+2023-10,Education,24500
+2023-11,Education,21720
+2023-12,Education,23090
+2024-01,Education,50770
+2024-02,Education,101120
+2024-03,Education,30810
+2024-04,Education,31800
+2024-05,Education,26400
+2024-06,Education,25940
+2024-07,Education,84140
+2024-08,Education,35970
+2024-09,Education,31350
+2024-10,Education,27730
+2024-11,Education,21640
+2024-12,Education,24560
+2025-01,Education,51110
+2025-02,Education,119230
+2025-03,Education,40070
+2025-04,Education,31140
+2025-05,Education,28750
+2025-06,Education,30740
+2025-07,Education,87070
+2025-08,Education,46560
+2025-09,Education,34590
+2025-10,Education,35450
+2025-11,Education,28500
+2025-12,Education,26930
+2026-01,Education,57250
+2026-02,Education,113010
+2026-03,Education,49670
+2026-04,Education,34740
+2026-05,Education,25320
+2026-06,Education,29300
+2026-07,Education,87700
+1991-01,Employment,2610
+1991-02,Employment,1670
+1991-03,Employment,1650
+1991-04,Employment,2650
+1991-05,Employment,2550
+1991-06,Employment,2080
+1991-07,Employment,2170
+1991-08,Employment,2240
+1991-09,Employment,2570
+1991-10,Employment,2590
+1991-11,Employment,2310
+1991-12,Employment,1860
+1992-01,Employment,2980
+1992-02,Employment,1900
+1992-03,Employment,2300
+1992-04,Employment,2090
+1992-05,Employment,1860
+1992-06,Employment,1900
+1992-07,Employment,1900
+1992-08,Employment,1760
+1992-09,Employment,1410
+1992-10,Employment,1680
+1992-11,Employment,2150
+1992-12,Employment,1750
+1993-01,Employment,2460
+1993-02,Employment,2010
+1993-03,Employment,1910
+1993-04,Employment,1750
+1993-05,Employment,1560
+1993-06,Employment,1520
+1993-07,Employment,2160
+1993-08,Employment,2030
+1993-09,Employment,2320
+1993-10,Employment,2230
+1993-11,Employment,2060
+1993-12,Employment,2020
+1994-01,Employment,3570
+1994-02,Employment,2580
+1994-03,Employment,2410
+1994-04,Employment,3050
+1994-05,Employment,2100
+1994-06,Employment,1910
+1994-07,Employment,2850
+1994-08,Employment,2610
+1994-09,Employment,1380
+1994-10,Employment,1710
+1994-11,Employment,1500
+1994-12,Employment,1350
+1995-01,Employment,2350
+1995-02,Employment,1570
+1995-03,Employment,1890
+1995-04,Employment,1880
+1995-05,Employment,1670
+1995-06,Employment,1900
+1995-07,Employment,1860
+1995-08,Employment,1660
+1995-09,Employment,1750
+1995-10,Employment,1950
+1995-11,Employment,1650
+1995-12,Employment,1540
+1996-01,Employment,2650
+1996-02,Employment,1970
+1996-03,Employment,1990
+1996-04,Employment,2150
+1996-05,Employment,1360
+1996-06,Employment,1790
+1996-07,Employment,2250
+1996-08,Employment,1690
+1996-09,Employment,1720
+1996-10,Employment,2250
+1996-11,Employment,2060
+1996-12,Employment,1800
+1997-01,Employment,3210
+1997-02,Employment,1850
+1997-03,Employment,2310
+1997-04,Employment,2100
+1997-05,Employment,1710
+1997-06,Employment,2640
+1997-07,Employment,2430
+1997-08,Employment,2470
+1997-09,Employment,2390
+1997-10,Employment,2500
+1997-11,Employment,2850
+1997-12,Employment,2110
+1998-01,Employment,3030
+1998-02,Employment,2730
+1998-03,Employment,1900
+1998-04,Employment,2440
+1998-05,Employment,2340
+1998-06,Employment,1970
+1998-07,Employment,3480
+1998-08,Employment,3740
+1998-09,Employment,3280
+1998-10,Employment,3990
+1998-11,Employment,3610
+1998-12,Employment,3490
+1999-01,Employment,5300
+1999-02,Employment,3760
+1999-03,Employment,3420
+1999-04,Employment,3520
+1999-05,Employment,3030
+1999-06,Employment,3840
+1999-07,Employment,4200
+1999-08,Employment,3610
+1999-09,Employment,3670
+1999-10,Employment,3420
+1999-11,Employment,3870
+1999-12,Employment,2940
+2000-01,Employment,4720
+2000-02,Employment,3530
+2000-03,Employment,3750
+2000-04,Employment,3900
+2000-05,Employment,3490
+2000-06,Employment,3240
+2000-07,Employment,4530
+2000-08,Employment,5170
+2000-09,Employment,6420
+2000-10,Employment,4190
+2000-11,Employment,4120
+2000-12,Employment,3320
+2001-01,Employment,5540
+2001-02,Employment,4600
+2001-03,Employment,3890
+2001-04,Employment,3490
+2001-05,Employment,3240
+2001-06,Employment,3190
+2001-07,Employment,4900
+2001-08,Employment,4690
+2001-09,Employment,5530
+2001-10,Employment,6780
+2001-11,Employment,5030
+2001-12,Employment,5910
+2002-01,Employment,9030
+2002-02,Employment,7210
+2002-03,Employment,9570
+2002-04,Employment,8500
+2002-05,Employment,6530
+2002-06,Employment,5650
+2002-07,Employment,5650
+2002-08,Employment,6410
+2002-09,Employment,6590
+2002-10,Employment,6140
+2002-11,Employment,6140
+2002-12,Employment,4430
+2003-01,Employment,7380
+2003-02,Employment,5860
+2003-03,Employment,5020
+2003-04,Employment,4210
+2003-05,Employment,4310
+2003-06,Employment,5460
+2003-07,Employment,8120
+2003-08,Employment,8120
+2003-09,Employment,8600
+2003-10,Employment,9660
+2003-11,Employment,8620
+2003-12,Employment,8530
+2004-01,Employment,12120
+2004-02,Employment,10370
+2004-03,Employment,8360
+2004-04,Employment,8810
+2004-05,Employment,9050
+2004-06,Employment,9050
+2004-07,Employment,6880
+2004-08,Employment,6120
+2004-09,Employment,6130
+2004-10,Employment,7550
+2004-11,Employment,7640
+2004-12,Employment,7210
+2005-01,Employment,8960
+2005-02,Employment,6570
+2005-03,Employment,8600
+2005-04,Employment,6460
+2005-05,Employment,6240
+2005-06,Employment,7430
+2005-07,Employment,9860
+2005-08,Employment,11130
+2005-09,Employment,10450
+2005-10,Employment,13860
+2005-11,Employment,11950
+2005-12,Employment,14010
+2006-01,Employment,14700
+2006-02,Employment,12200
+2006-03,Employment,12690
+2006-04,Employment,12930
+2006-05,Employment,12650
+2006-06,Employment,12850
+2006-07,Employment,14370
+2006-08,Employment,13570
+2006-09,Employment,14440
+2006-10,Employment,15240
+2006-11,Employment,14900
+2006-12,Employment,17950
+2007-01,Employment,16260
+2007-02,Employment,14710
+2007-03,Employment,14710
+2007-04,Employment,14020
+2007-05,Employment,13680
+2007-06,Employment,13790
+2007-07,Employment,13820
+2007-08,Employment,15530
+2007-09,Employment,14620
+2007-10,Employment,14680
+2007-11,Employment,17290
+2007-12,Employment,17530
+2008-01,Employment,18450
+2008-02,Employment,18200
+2008-03,Employment,16260
+2008-04,Employment,15670
+2008-05,Employment,13440
+2008-06,Employment,15770
+2008-07,Employment,15830
+2008-08,Employment,15250
+2008-09,Employment,16670
+2008-10,Employment,15950
+2008-11,Employment,16070
+2008-12,Employment,17800
+2009-01,Employment,19990
+2009-02,Employment,16810
+2009-03,Employment,16150
+2009-04,Employment,15060
+2009-05,Employment,13640
+2009-06,Employment,13240
+2009-07,Employment,13970
+2009-08,Employment,15330
+2009-09,Employment,15640
+2009-10,Employment,15490
+2009-11,Employment,14920
+2009-12,Employment,16760
+2010-01,Employment,18970
+2010-02,Employment,17680
+2010-03,Employment,16870
+2010-04,Employment,14750
+2010-05,Employment,13450
+2010-06,Employment,14690
+2010-07,Employment,15690
+2010-08,Employment,15000
+2010-09,Employment,16900
+2010-10,Employment,16380
+2010-11,Employment,16910
+2010-12,Employment,17280
+2011-01,Employment,20440
+2011-02,Employment,20020
+2011-03,Employment,17000
+2011-04,Employment,16290
+2011-05,Employment,15650
+2011-06,Employment,16130
+2011-07,Employment,17200
+2011-08,Employment,17590
+2011-09,Employment,18900
+2011-10,Employment,20820
+2011-11,Employment,18710
+2011-12,Employment,18060
+2012-01,Employment,24990
+2012-02,Employment,19950
+2012-03,Employment,19980
+2012-04,Employment,20390
+2012-05,Employment,17670
+2012-06,Employment,18320
+2012-07,Employment,19040
+2012-08,Employment,22600
+2012-09,Employment,18840
+2012-10,Employment,19310
+2012-11,Employment,17240
+2012-12,Employment,17640
+2013-01,Employment,27260
+2013-02,Employment,19860
+2013-03,Employment,21360
+2013-04,Employment,19150
+2013-05,Employment,15060
+2013-06,Employment,16660
+2013-07,Employment,16390
+2013-08,Employment,17120
+2013-09,Employment,18360
+2013-10,Employment,19750
+2013-11,Employment,17800
+2013-12,Employment,17320
+2014-01,Employment,27930
+2014-02,Employment,20630
+2014-03,Employment,18370
+2014-04,Employment,16800
+2014-05,Employment,14930
+2014-06,Employment,14970
+2014-07,Employment,16540
+2014-08,Employment,17060
+2014-09,Employment,19010
+2014-10,Employment,29010
+2014-11,Employment,26070
+2014-12,Employment,33500
+2015-01,Employment,32370
+2015-02,Employment,31270
+2015-03,Employment,24110
+2015-04,Employment,26120
+2015-05,Employment,25370
+2015-06,Employment,25130
+2015-07,Employment,28250
+2015-08,Employment,26710
+2015-09,Employment,21990
+2015-10,Employment,21260
+2015-11,Employment,27090
+2015-12,Employment,27430
+2016-01,Employment,26490
+2016-02,Employment,23670
+2016-03,Employment,23260
+2016-04,Employment,18450
+2016-05,Employment,18240
+2016-06,Employment,20010
+2016-07,Employment,23400
+2016-08,Employment,19600
+2016-09,Employment,23770
+2016-10,Employment,31860
+2016-11,Employment,22330
+2016-12,Employment,28100
+2017-01,Employment,35110
+2017-02,Employment,31630
+2017-03,Employment,21010
+2017-04,Employment,22200
+2017-05,Employment,18350
+2017-06,Employment,22900
+2017-07,Employment,16780
+2017-08,Employment,17610
+2017-09,Employment,19880
+2017-10,Employment,19550
+2017-11,Employment,17190
+2017-12,Employment,14410
+2018-01,Employment,25330
+2018-02,Employment,17550
+2018-03,Employment,17980
+2018-04,Employment,17270
+2018-05,Employment,15580
+2018-06,Employment,15270
+2018-07,Employment,14260
+2018-08,Employment,15790
+2018-09,Employment,19060
+2018-10,Employment,18460
+2018-11,Employment,17430
+2018-12,Employment,14860
+2019-01,Employment,26580
+2019-02,Employment,20300
+2019-03,Employment,17360
+2019-04,Employment,14970
+2019-05,Employment,17140
+2019-06,Employment,15910
+2019-07,Employment,14520
+2019-08,Employment,16360
+2019-09,Employment,19280
+2019-10,Employment,19610
+2019-11,Employment,18840
+2019-12,Employment,14780
+2020-01,Employment,29800
+2020-02,Employment,20320
+2020-03,Employment,10980
+2020-04,Employment,160
+2020-05,Employment,280
+2020-06,Employment,570
+2020-07,Employment,450
+2020-08,Employment,480
+2020-09,Employment,790
+2020-10,Employment,1160
+2020-11,Employment,1120
+2020-12,Employment,1110
+2021-01,Employment,1450
+2021-02,Employment,1140
+2021-03,Employment,1800
+2021-04,Employment,2040
+2021-05,Employment,2650
+2021-06,Employment,2630
+2021-07,Employment,1520
+2021-08,Employment,1800
+2021-09,Employment,1440
+2021-10,Employment,1870
+2021-11,Employment,1780
+2021-12,Employment,2630
+2022-01,Employment,4860
+2022-02,Employment,5450
+2022-03,Employment,8490
+2022-04,Employment,9430
+2022-05,Employment,10750
+2022-06,Employment,11510
+2022-07,Employment,11400
+2022-08,Employment,15190
+2022-09,Employment,17500
+2022-10,Employment,17860
+2022-11,Employment,20780
+2022-12,Employment,16740
+2023-01,Employment,27350
+2023-02,Employment,25640
+2023-03,Employment,24440
+2023-04,Employment,20950
+2023-05,Employment,21500
+2023-06,Employment,22860
+2023-07,Employment,20070
+2023-08,Employment,23180
+2023-09,Employment,26620
+2023-10,Employment,26170
+2023-11,Employment,28030
+2023-12,Employment,20820
+2024-01,Employment,39980
+2024-02,Employment,31150
+2024-03,Employment,29530
+2024-04,Employment,25760
+2024-05,Employment,24820
+2024-06,Employment,24140
+2024-07,Employment,21710
+2024-08,Employment,24080
+2024-09,Employment,28570
+2024-10,Employment,27360
+2024-11,Employment,27950
+2024-12,Employment,22660
+2025-01,Employment,42960
+2025-02,Employment,33410
+2025-03,Employment,30950
+2025-04,Employment,26980
+2025-05,Employment,26850
+2025-06,Employment,26830
+2025-07,Employment,24750
+2025-08,Employment,27580
+2025-09,Employment,32060
+2025-10,Employment,32560
+2025-11,Employment,34470
+2025-12,Employment,24390
+2026-01,Employment,49080
+2026-02,Employment,35620
+2026-03,Employment,38050
+2026-04,Employment,32520
+2026-05,Employment,29700
+2026-06,Employment,28680
+2026-07,Employment,27200
+1991-01,Holiday,108880
+1991-02,Holiday,109100
+1991-03,Holiday,111670
+1991-04,Holiday,96700
+1991-05,Holiday,96510
+1991-06,Holiday,97410
+1991-07,Holiday,129350
+1991-08,Holiday,127160
+1991-09,Holiday,123140
+1991-10,Holiday,136330
+1991-11,Holiday,136520
+1991-12,Holiday,162720
+1992-01,Holiday,124450
+1992-02,Holiday,148630
+1992-03,Holiday,135750
+1992-04,Holiday,122370
+1992-05,Holiday,105150
+1992-06,Holiday,111350
+1992-07,Holiday,131490
+1992-08,Holiday,125830
+1992-09,Holiday,116360
+1992-10,Holiday,144770
+1992-11,Holiday,160320
+1992-12,Holiday,188940
+1993-01,Holiday,160490
+1993-02,Holiday,146830
+1993-03,Holiday,160410
+1993-04,Holiday,138750
+1993-05,Holiday,129280
+1993-06,Holiday,131770
+1993-07,Holiday,148930
+1993-08,Holiday,154880
+1993-09,Holiday,134740
+1993-10,Holiday,174330
+1993-11,Holiday,185390
+1993-12,Holiday,224360
+1994-01,Holiday,158410
+1994-02,Holiday,197140
+1994-03,Holiday,198130
+1994-04,Holiday,159660
+1994-05,Holiday,136890
+1994-06,Holiday,148020
+1994-07,Holiday,176030
+1994-08,Holiday,180890
+1994-09,Holiday,147650
+1994-10,Holiday,180590
+1994-11,Holiday,188450
+1994-12,Holiday,237110
+1995-01,Holiday,189210
+1995-02,Holiday,185790
+1995-03,Holiday,193960
+1995-04,Holiday,175430
+1995-05,Holiday,150620
+1995-06,Holiday,157310
+1995-07,Holiday,193710
+1995-08,Holiday,190720
+1995-09,Holiday,154660
+1995-10,Holiday,191740
+1995-11,Holiday,212620
+1995-12,Holiday,261780
+1996-01,Holiday,187330
+1996-02,Holiday,247960
+1996-03,Holiday,223120
+1996-04,Holiday,196700
+1996-05,Holiday,157600
+1996-06,Holiday,182720
+1996-07,Holiday,207880
+1996-08,Holiday,208880
+1996-09,Holiday,182390
+1996-10,Holiday,205690
+1996-11,Holiday,225030
+1996-12,Holiday,293080
+1997-01,Holiday,199230
+1997-02,Holiday,253580
+1997-03,Holiday,236490
+1997-04,Holiday,187490
+1997-05,Holiday,169950
+1997-06,Holiday,176850
+1997-07,Holiday,227840
+1997-08,Holiday,202510
+1997-09,Holiday,189070
+1997-10,Holiday,211970
+1997-11,Holiday,220320
+1997-12,Holiday,259200
+1998-01,Holiday,198470
+1998-02,Holiday,188220
+1998-03,Holiday,182330
+1998-04,Holiday,189410
+1998-05,Holiday,159070
+1998-06,Holiday,175110
+1998-07,Holiday,183910
+1998-08,Holiday,168490
+1998-09,Holiday,130290
+1998-10,Holiday,186780
+1998-11,Holiday,199600
+1998-12,Holiday,256890
+1999-01,Holiday,186890
+1999-02,Holiday,226640
+1999-03,Holiday,219680
+1999-04,Holiday,184200
+1999-05,Holiday,160780
+1999-06,Holiday,177990
+1999-07,Holiday,205830
+1999-08,Holiday,212200
+1999-09,Holiday,197950
+1999-10,Holiday,221780
+1999-11,Holiday,236990
+1999-12,Holiday,271780
+2000-01,Holiday,195370
+2000-02,Holiday,241430
+2000-03,Holiday,235190
+2000-04,Holiday,221680
+2000-05,Holiday,166130
+2000-06,Holiday,184170
+2000-07,Holiday,214190
+2000-08,Holiday,205540
+2000-09,Holiday,204850
+2000-10,Holiday,221080
+2000-11,Holiday,255250
+2000-12,Holiday,312220
+2001-01,Holiday,226670
+2001-02,Holiday,218260
+2001-03,Holiday,233250
+2001-04,Holiday,217510
+2001-05,Holiday,176540
+2001-06,Holiday,207230
+2001-07,Holiday,212160
+2001-08,Holiday,194860
+2001-09,Holiday,173590
+2001-10,Holiday,176250
+2001-11,Holiday,188780
+2001-12,Holiday,259170
+2002-01,Holiday,172640
+2002-02,Holiday,206350
+2002-03,Holiday,213240
+2002-04,Holiday,178310
+2002-05,Holiday,159200
+2002-06,Holiday,161860
+2002-07,Holiday,183520
+2002-08,Holiday,189080
+2002-09,Holiday,166980
+2002-10,Holiday,230040
+2002-11,Holiday,243060
+2002-12,Holiday,297200
+2003-01,Holiday,204170
+2003-02,Holiday,213090
+2003-03,Holiday,199010
+2003-04,Holiday,159290
+2003-05,Holiday,119290
+2003-06,Holiday,156500
+2003-07,Holiday,197300
+2003-08,Holiday,190710
+2003-09,Holiday,197360
+2003-10,Holiday,230470
+2003-11,Holiday,262350
+2003-12,Holiday,311020
+2004-01,Holiday,219160
+2004-02,Holiday,214100
+2004-03,Holiday,219250
+2004-04,Holiday,202580
+2004-05,Holiday,170280
+2004-06,Holiday,188380
+2004-07,Holiday,243270
+2004-08,Holiday,230090
+2004-09,Holiday,211980
+2004-10,Holiday,248800
+2004-11,Holiday,275280
+2004-12,Holiday,342970
+2005-01,Holiday,244920
+2005-02,Holiday,272700
+2005-03,Holiday,279410
+2005-04,Holiday,220530
+2005-05,Holiday,185280
+2005-06,Holiday,202910
+2005-07,Holiday,254200
+2005-08,Holiday,238680
+2005-09,Holiday,216190
+2005-10,Holiday,255060
+2005-11,Holiday,252280
+2005-12,Holiday,333520
+2006-01,Holiday,256660
+2006-02,Holiday,237060
+2006-03,Holiday,246760
+2006-04,Holiday,226260
+2006-05,Holiday,172090
+2006-06,Holiday,188360
+2006-07,Holiday,227630
+2006-08,Holiday,216420
+2006-09,Holiday,218430
+2006-10,Holiday,251380
+2006-11,Holiday,265940
+2006-12,Holiday,360600
+2007-01,Holiday,229310
+2007-02,Holiday,260980
+2007-03,Holiday,252540
+2007-04,Holiday,220540
+2007-05,Holiday,174820
+2007-06,Holiday,195360
+2007-07,Holiday,226720
+2007-08,Holiday,225540
+2007-09,Holiday,213200
+2007-10,Holiday,239960
+2007-11,Holiday,256040
+2007-12,Holiday,330010
+2008-01,Holiday,218680
+2008-02,Holiday,263350
+2008-03,Holiday,249830
+2008-04,Holiday,195880
+2008-05,Holiday,181720
+2008-06,Holiday,177860
+2008-07,Holiday,220680
+2008-08,Holiday,203000
+2008-09,Holiday,186240
+2008-10,Holiday,222970
+2008-11,Holiday,236290
+2008-12,Holiday,318910
+2009-01,Holiday,227960
+2009-02,Holiday,225520
+2009-03,Holiday,232880
+2009-04,Holiday,219070
+2009-05,Holiday,171320
+2009-06,Holiday,162300
+2009-07,Holiday,188240
+2009-08,Holiday,193880
+2009-09,Holiday,207650
+2009-10,Holiday,236840
+2009-11,Holiday,232460
+2009-12,Holiday,328580
+2010-01,Holiday,205940
+2010-02,Holiday,261620
+2010-03,Holiday,243320
+2010-04,Holiday,195900
+2010-05,Holiday,165930
+2010-06,Holiday,181850
+2010-07,Holiday,222430
+2010-08,Holiday,214870
+2010-09,Holiday,229220
+2010-10,Holiday,236050
+2010-11,Holiday,247050
+2010-12,Holiday,340670
+2011-01,Holiday,219150
+2011-02,Holiday,242410
+2011-03,Holiday,215990
+2011-04,Holiday,206150
+2011-05,Holiday,158730
+2011-06,Holiday,170030
+2011-07,Holiday,206730
+2011-08,Holiday,224630
+2011-09,Holiday,185260
+2011-10,Holiday,230520
+2011-11,Holiday,239130
+2011-12,Holiday,333680
+2012-01,Holiday,243620
+2012-02,Holiday,228390
+2012-03,Holiday,246410
+2012-04,Holiday,207190
+2012-05,Holiday,161020
+2012-06,Holiday,186580
+2012-07,Holiday,202350
+2012-08,Holiday,237590
+2012-09,Holiday,204890
+2012-10,Holiday,241750
+2012-11,Holiday,269550
+2012-12,Holiday,353740
+2013-01,Holiday,223070
+2013-02,Holiday,288370
+2013-03,Holiday,267140
+2013-04,Holiday,203150
+2013-05,Holiday,177900
+2013-06,Holiday,206920
+2013-07,Holiday,222430
+2013-08,Holiday,265820
+2013-09,Holiday,221670
+2013-10,Holiday,249090
+2013-11,Holiday,273440
+2013-12,Holiday,385710
+2014-01,Holiday,273520
+2014-02,Holiday,288180
+2014-03,Holiday,280510
+2014-04,Holiday,244620
+2014-05,Holiday,208560
+2014-06,Holiday,207810
+2014-07,Holiday,271210
+2014-08,Holiday,263450
+2014-09,Holiday,243580
+2014-10,Holiday,265780
+2014-11,Holiday,275790
+2014-12,Holiday,378920
+2015-01,Holiday,228910
+2015-02,Holiday,342810
+2015-03,Holiday,308350
+2015-04,Holiday,247460
+2015-05,Holiday,214910
+2015-06,Holiday,213990
+2015-07,Holiday,271370
+2015-08,Holiday,269060
+2015-09,Holiday,265520
+2015-10,Holiday,314870
+2015-11,Holiday,342780
+2015-12,Holiday,476820
+2016-01,Holiday,318620
+2016-02,Holiday,411650
+2016-03,Holiday,397040
+2016-04,Holiday,310130
+2016-05,Holiday,273960
+2016-06,Holiday,277630
+2016-07,Holiday,344480
+2016-08,Holiday,340540
+2016-09,Holiday,329200
+2016-10,Holiday,345940
+2016-11,Holiday,384920
+2016-12,Holiday,515890
+2017-01,Holiday,392440
+2017-02,Holiday,358810
+2017-03,Holiday,404940
+2017-04,Holiday,366370
+2017-05,Holiday,297530
+2017-06,Holiday,300790
+2017-07,Holiday,332950
+2017-08,Holiday,359360
+2017-09,Holiday,309320
+2017-10,Holiday,356260
+2017-11,Holiday,380920
+2017-12,Holiday,487950
+2018-01,Holiday,323630
+2018-02,Holiday,449380
+2018-03,Holiday,408660
+2018-04,Holiday,309640
+2018-05,Holiday,270190
+2018-06,Holiday,301160
+2018-07,Holiday,330840
+2018-08,Holiday,376230
+2018-09,Holiday,318330
+2018-10,Holiday,351170
+2018-11,Holiday,390830
+2018-12,Holiday,509280
+2019-01,Holiday,353090
+2019-02,Holiday,441800
+2019-03,Holiday,400350
+2019-04,Holiday,323290
+2019-05,Holiday,314820
+2019-06,Holiday,311440
+2019-07,Holiday,347490
+2019-08,Holiday,401070
+2019-09,Holiday,311880
+2019-10,Holiday,361630
+2019-11,Holiday,393980
+2019-12,Holiday,514880
+2020-01,Holiday,377820
+2020-02,Holiday,285580
+2020-03,Holiday,124450
+2020-04,Holiday,150
+2020-05,Holiday,120
+2020-06,Holiday,130
+2020-07,Holiday,120
+2020-08,Holiday,50
+2020-09,Holiday,70
+2020-10,Holiday,140
+2020-11,Holiday,290
+2020-12,Holiday,420
+2021-01,Holiday,230
+2021-02,Holiday,180
+2021-03,Holiday,270
+2021-04,Holiday,1970
+2021-05,Holiday,4070
+2021-06,Holiday,5660
+2021-07,Holiday,2670
+2021-08,Holiday,120
+2021-09,Holiday,40
+2021-10,Holiday,50
+2021-11,Holiday,1250
+2021-12,Holiday,4860
+2022-01,Holiday,4070
+2022-02,Holiday,6340
+2022-03,Holiday,22510
+2022-04,Holiday,42600
+2022-05,Holiday,50640
+2022-06,Holiday,76490
+2022-07,Holiday,93620
+2022-08,Holiday,104140
+2022-09,Holiday,111980
+2022-10,Holiday,157810
+2022-11,Holiday,173340
+2022-12,Holiday,212810
+2023-01,Holiday,160540
+2023-02,Holiday,218480
+2023-03,Holiday,229680
+2023-04,Holiday,213040
+2023-05,Holiday,195700
+2023-06,Holiday,217640
+2023-07,Holiday,253770
+2023-08,Holiday,267700
+2023-09,Holiday,239530
+2023-10,Holiday,252630
+2023-11,Holiday,278460
+2023-12,Holiday,357880
+2024-01,Holiday,262700
+2024-02,Holiday,391080
+2024-03,Holiday,334530
+2024-04,Holiday,256830
+2024-05,Holiday,258760
+2024-06,Holiday,250020
+2024-07,Holiday,284280
+2024-08,Holiday,310320
+2024-09,Holiday,264550
+2024-10,Holiday,299070
+2024-11,Holiday,296590
+2024-12,Holiday,399190
+2025-01,Holiday,348220
+2025-02,Holiday,315680
+2025-03,Holiday,336060
+2025-04,Holiday,261850
+2025-05,Holiday,260010
+2025-06,Holiday,277830
+2025-07,Holiday,330610
+2025-08,Holiday,367890
+2025-09,Holiday,301030
+2025-10,Holiday,338530
+2025-11,Holiday,379920
+2025-12,Holiday,458960
+2026-01,Holiday,318980
+2026-02,Holiday,447170
+2026-03,Holiday,373270
+2026-04,Holiday,289110
+2026-05,Holiday,277540
+2026-06,Holiday,247400
+2026-07,Holiday,313510
+1991-01,Other,11900
+1991-02,Other,11690
+1991-03,Other,11510
+1991-04,Other,7520
+1991-05,Other,8630
+1991-06,Other,6670
+1991-07,Other,8560
+1991-08,Other,9330
+1991-09,Other,8040
+1991-10,Other,8810
+1991-11,Other,9770
+1991-12,Other,9500
+1992-01,Other,10740
+1992-02,Other,10050
+1992-03,Other,10170
+1992-04,Other,10740
+1992-05,Other,10730
+1992-06,Other,10540
+1992-07,Other,14170
+1992-08,Other,13960
+1992-09,Other,11580
+1992-10,Other,13110
+1992-11,Other,13250
+1992-12,Other,15620
+1993-01,Other,15600
+1993-02,Other,15660
+1993-03,Other,15210
+1993-04,Other,13830
+1993-05,Other,12770
+1993-06,Other,13080
+1993-07,Other,14760
+1993-08,Other,15220
+1993-09,Other,14920
+1993-10,Other,9740
+1993-11,Other,11340
+1993-12,Other,12090
+1994-01,Other,11710
+1994-02,Other,11290
+1994-03,Other,12350
+1994-04,Other,10530
+1994-05,Other,9020
+1994-06,Other,9030
+1994-07,Other,11390
+1994-08,Other,11370
+1994-09,Other,16040
+1994-10,Other,16690
+1994-11,Other,15690
+1994-12,Other,15370
+1995-01,Other,20830
+1995-02,Other,18620
+1995-03,Other,16030
+1995-04,Other,14820
+1995-05,Other,13940
+1995-06,Other,16460
+1995-07,Other,17920
+1995-08,Other,14940
+1995-09,Other,15700
+1995-10,Other,16190
+1995-11,Other,15500
+1995-12,Other,17030
+1996-01,Other,18360
+1996-02,Other,17170
+1996-03,Other,16570
+1996-04,Other,16060
+1996-05,Other,13510
+1996-06,Other,17320
+1996-07,Other,20250
+1996-08,Other,17850
+1996-09,Other,16010
+1996-10,Other,18140
+1996-11,Other,16800
+1996-12,Other,17570
+1997-01,Other,20560
+1997-02,Other,19060
+1997-03,Other,19380
+1997-04,Other,19760
+1997-05,Other,18820
+1997-06,Other,17920
+1997-07,Other,24500
+1997-08,Other,19400
+1997-09,Other,21940
+1997-10,Other,22330
+1997-11,Other,21870
+1997-12,Other,19420
+1998-01,Other,25340
+1998-02,Other,18810
+1998-03,Other,19470
+1998-04,Other,19340
+1998-05,Other,16510
+1998-06,Other,20670
+1998-07,Other,53870
+1998-08,Other,51160
+1998-09,Other,93440
+1998-10,Other,28080
+1998-11,Other,24780
+1998-12,Other,31970
+1999-01,Other,31210
+1999-02,Other,26710
+1999-03,Other,26050
+1999-04,Other,25770
+1999-05,Other,24890
+1999-06,Other,26910
+1999-07,Other,35140
+1999-08,Other,28320
+1999-09,Other,28970
+1999-10,Other,33940
+1999-11,Other,30770
+1999-12,Other,28320
+2000-01,Other,35590
+2000-02,Other,31990
+2000-03,Other,31700
+2000-04,Other,33030
+2000-05,Other,26910
+2000-06,Other,29830
+2000-07,Other,43300
+2000-08,Other,34930
+2000-09,Other,64380
+2000-10,Other,40180
+2000-11,Other,36500
+2000-12,Other,36810
+2001-01,Other,38900
+2001-02,Other,33590
+2001-03,Other,32340
+2001-04,Other,31620
+2001-05,Other,29310
+2001-06,Other,31840
+2001-07,Other,65510
+2001-08,Other,66400
+2001-09,Other,63490
+2001-10,Other,65290
+2001-11,Other,54330
+2001-12,Other,79950
+2002-01,Other,68000
+2002-02,Other,72210
+2002-03,Other,70490
+2002-04,Other,41270
+2002-05,Other,55030
+2002-06,Other,60440
+2002-07,Other,72490
+2002-08,Other,68400
+2002-09,Other,66530
+2002-10,Other,48580
+2002-11,Other,45730
+2002-12,Other,49810
+2003-01,Other,47860
+2003-02,Other,43390
+2003-03,Other,44510
+2003-04,Other,35240
+2003-05,Other,27980
+2003-06,Other,33190
+2003-07,Other,42340
+2003-08,Other,32380
+2003-09,Other,36270
+2003-10,Other,42230
+2003-11,Other,42250
+2003-12,Other,45910
+2004-01,Other,43050
+2004-02,Other,40420
+2004-03,Other,38570
+2004-04,Other,39800
+2004-05,Other,33740
+2004-06,Other,36500
+2004-07,Other,21810
+2004-08,Other,13530
+2004-09,Other,15150
+2004-10,Other,18610
+2004-11,Other,17590
+2004-12,Other,15020
+2005-01,Other,22640
+2005-02,Other,14910
+2005-03,Other,17180
+2005-04,Other,16890
+2005-05,Other,16410
+2005-06,Other,16980
+2005-07,Other,23320
+2005-08,Other,16530
+2005-09,Other,18120
+2005-10,Other,19150
+2005-11,Other,20100
+2005-12,Other,14420
+2006-01,Other,19820
+2006-02,Other,19250
+2006-03,Other,24760
+2006-04,Other,15680
+2006-05,Other,15160
+2006-06,Other,17660
+2006-07,Other,21000
+2006-08,Other,15600
+2006-09,Other,17650
+2006-10,Other,18480
+2006-11,Other,19320
+2006-12,Other,14860
+2007-01,Other,21370
+2007-02,Other,18170
+2007-03,Other,26420
+2007-04,Other,17590
+2007-05,Other,17510
+2007-06,Other,18290
+2007-07,Other,21160
+2007-08,Other,16660
+2007-09,Other,18390
+2007-10,Other,20680
+2007-11,Other,19900
+2007-12,Other,16170
+2008-01,Other,20690
+2008-02,Other,20920
+2008-03,Other,18930
+2008-04,Other,18420
+2008-05,Other,17810
+2008-06,Other,19250
+2008-07,Other,54620
+2008-08,Other,18950
+2008-09,Other,17030
+2008-10,Other,20730
+2008-11,Other,19690
+2008-12,Other,16530
+2009-01,Other,21760
+2009-02,Other,21310
+2009-03,Other,19200
+2009-04,Other,18660
+2009-05,Other,17010
+2009-06,Other,17250
+2009-07,Other,22880
+2009-08,Other,20110
+2009-09,Other,20980
+2009-10,Other,23670
+2009-11,Other,20110
+2009-12,Other,19180
+2010-01,Other,22230
+2010-02,Other,21380
+2010-03,Other,22060
+2010-04,Other,19380
+2010-05,Other,17830
+2010-06,Other,17940
+2010-07,Other,22690
+2010-08,Other,19150
+2010-09,Other,22000
+2010-10,Other,23980
+2010-11,Other,23210
+2010-12,Other,19810
+2011-01,Other,24520
+2011-02,Other,25170
+2011-03,Other,26080
+2011-04,Other,19690
+2011-05,Other,19570
+2011-06,Other,21340
+2011-07,Other,24560
+2011-08,Other,21150
+2011-09,Other,24100
+2011-10,Other,25810
+2011-11,Other,23600
+2011-12,Other,19750
+2012-01,Other,23030
+2012-02,Other,23250
+2012-03,Other,22020
+2012-04,Other,24250
+2012-05,Other,19740
+2012-06,Other,20480
+2012-07,Other,25470
+2012-08,Other,20140
+2012-09,Other,25020
+2012-10,Other,26340
+2012-11,Other,26280
+2012-12,Other,20180
+2013-01,Other,28810
+2013-02,Other,24890
+2013-03,Other,24310
+2013-04,Other,21820
+2013-05,Other,22300
+2013-06,Other,20250
+2013-07,Other,26310
+2013-08,Other,21040
+2013-09,Other,23820
+2013-10,Other,24530
+2013-11,Other,25420
+2013-12,Other,19960
+2014-01,Other,24960
+2014-02,Other,26950
+2014-03,Other,23650
+2014-04,Other,20670
+2014-05,Other,22050
+2014-06,Other,19420
+2014-07,Other,22480
+2014-08,Other,23540
+2014-09,Other,22830
+2014-10,Other,31850
+2014-11,Other,29550
+2014-12,Other,26230
+2015-01,Other,29740
+2015-02,Other,26720
+2015-03,Other,30210
+2015-04,Other,24150
+2015-05,Other,23380
+2015-06,Other,23430
+2015-07,Other,29110
+2015-08,Other,22390
+2015-09,Other,22650
+2015-10,Other,26790
+2015-11,Other,23770
+2015-12,Other,21600
+2016-01,Other,30360
+2016-02,Other,28540
+2016-03,Other,24760
+2016-04,Other,29370
+2016-05,Other,29540
+2016-06,Other,22960
+2016-07,Other,30160
+2016-08,Other,27190
+2016-09,Other,27170
+2016-10,Other,37350
+2016-11,Other,26840
+2016-12,Other,26230
+2017-01,Other,25570
+2017-02,Other,26440
+2017-03,Other,25640
+2017-04,Other,23790
+2017-05,Other,21170
+2017-06,Other,21230
+2017-07,Other,27920
+2017-08,Other,23410
+2017-09,Other,24890
+2017-10,Other,25390
+2017-11,Other,24140
+2017-12,Other,18090
+2018-01,Other,25420
+2018-02,Other,25400
+2018-03,Other,29400
+2018-04,Other,26520
+2018-05,Other,21120
+2018-06,Other,19740
+2018-07,Other,25800
+2018-08,Other,22490
+2018-09,Other,25690
+2018-10,Other,28720
+2018-11,Other,31440
+2018-12,Other,28530
+2019-01,Other,27560
+2019-02,Other,26790
+2019-03,Other,27750
+2019-04,Other,22640
+2019-05,Other,21890
+2019-06,Other,20960
+2019-07,Other,26500
+2019-08,Other,25400
+2019-09,Other,25470
+2019-10,Other,30530
+2019-11,Other,26020
+2019-12,Other,21210
+2020-01,Other,29950
+2020-02,Other,24660
+2020-03,Other,14490
+2020-04,Other,950
+2020-05,Other,1410
+2020-06,Other,2080
+2020-07,Other,1000
+2020-08,Other,910
+2020-09,Other,860
+2020-10,Other,1280
+2020-11,Other,1240
+2020-12,Other,1120
+2021-01,Other,1680
+2021-02,Other,1110
+2021-03,Other,1260
+2021-04,Other,1530
+2021-05,Other,1980
+2021-06,Other,2760
+2021-07,Other,1530
+2021-08,Other,1890
+2021-09,Other,1410
+2021-10,Other,960
+2021-11,Other,2030
+2021-12,Other,4710
+2022-01,Other,4070
+2022-02,Other,4690
+2022-03,Other,6450
+2022-04,Other,8070
+2022-05,Other,8370
+2022-06,Other,9340
+2022-07,Other,10890
+2022-08,Other,13440
+2022-09,Other,16270
+2022-10,Other,16690
+2022-11,Other,18940
+2022-12,Other,16010
+2023-01,Other,17480
+2023-02,Other,23400
+2023-03,Other,21840
+2023-04,Other,19460
+2023-05,Other,17970
+2023-06,Other,19840
+2023-07,Other,28390
+2023-08,Other,22010
+2023-09,Other,25740
+2023-10,Other,27410
+2023-11,Other,28290
+2023-12,Other,31710
+2024-01,Other,28410
+2024-02,Other,29910
+2024-03,Other,27920
+2024-04,Other,25050
+2024-05,Other,24680
+2024-06,Other,21250
+2024-07,Other,23380
+2024-08,Other,26320
+2024-09,Other,25510
+2024-10,Other,28490
+2024-11,Other,27090
+2024-12,Other,21640
+2025-01,Other,26140
+2025-02,Other,27650
+2025-03,Other,27610
+2025-04,Other,20830
+2025-05,Other,23730
+2025-06,Other,22220
+2025-07,Other,26520
+2025-08,Other,27640
+2025-09,Other,30040
+2025-10,Other,30850
+2025-11,Other,30030
+2025-12,Other,25360
+2026-01,Other,29360
+2026-02,Other,28560
+2026-03,Other,26780
+2026-04,Other,23610
+2026-05,Other,21920
+2026-06,Other,21010
+2026-07,Other,23560
+1991-01,Visiting friends/relatives,28790
+1991-02,Visiting friends/relatives,35250
+1991-03,Visiting friends/relatives,40060
+1991-04,Visiting friends/relatives,33930
+1991-05,Visiting friends/relatives,30210
+1991-06,Visiting friends/relatives,33680
+1991-07,Visiting friends/relatives,39170
+1991-08,Visiting friends/relatives,35630
+1991-09,Visiting friends/relatives,38130
+1991-10,Visiting friends/relatives,38820
+1991-11,Visiting friends/relatives,45180
+1991-12,Visiting friends/relatives,75080
+1992-01,Visiting friends/relatives,32630
+1992-02,Visiting friends/relatives,39510
+1992-03,Visiting friends/relatives,39050
+1992-04,Visiting friends/relatives,42540
+1992-05,Visiting friends/relatives,30100
+1992-06,Visiting friends/relatives,31010
+1992-07,Visiting friends/relatives,39860
+1992-08,Visiting friends/relatives,31420
+1992-09,Visiting friends/relatives,34520
+1992-10,Visiting friends/relatives,40620
+1992-11,Visiting friends/relatives,48770
+1992-12,Visiting friends/relatives,79480
+1993-01,Visiting friends/relatives,36730
+1993-02,Visiting friends/relatives,39390
+1993-03,Visiting friends/relatives,49020
+1993-04,Visiting friends/relatives,42350
+1993-05,Visiting friends/relatives,33620
+1993-06,Visiting friends/relatives,32950
+1993-07,Visiting friends/relatives,41290
+1993-08,Visiting friends/relatives,38950
+1993-09,Visiting friends/relatives,38880
+1993-10,Visiting friends/relatives,43260
+1993-11,Visiting friends/relatives,49190
+1993-12,Visiting friends/relatives,84910
+1994-01,Visiting friends/relatives,42230
+1994-02,Visiting friends/relatives,43600
+1994-03,Visiting friends/relatives,53810
+1994-04,Visiting friends/relatives,41990
+1994-05,Visiting friends/relatives,31860
+1994-06,Visiting friends/relatives,38460
+1994-07,Visiting friends/relatives,44460
+1994-08,Visiting friends/relatives,36590
+1994-09,Visiting friends/relatives,47920
+1994-10,Visiting friends/relatives,55660
+1994-11,Visiting friends/relatives,61950
+1994-12,Visiting friends/relatives,106480
+1995-01,Visiting friends/relatives,54810
+1995-02,Visiting friends/relatives,54960
+1995-03,Visiting friends/relatives,56270
+1995-04,Visiting friends/relatives,62810
+1995-05,Visiting friends/relatives,38070
+1995-06,Visiting friends/relatives,48130
+1995-07,Visiting friends/relatives,53370
+1995-08,Visiting friends/relatives,44810
+1995-09,Visiting friends/relatives,52630
+1995-10,Visiting friends/relatives,57280
+1995-11,Visiting friends/relatives,63810
+1995-12,Visiting friends/relatives,113190
+1996-01,Visiting friends/relatives,57800
+1996-02,Visiting friends/relatives,61550
+1996-03,Visiting friends/relatives,68070
+1996-04,Visiting friends/relatives,63930
+1996-05,Visiting friends/relatives,44550
+1996-06,Visiting friends/relatives,56500
+1996-07,Visiting friends/relatives,59230
+1996-08,Visiting friends/relatives,52810
+1996-09,Visiting friends/relatives,57660
+1996-10,Visiting friends/relatives,64920
+1996-11,Visiting friends/relatives,74310
+1996-12,Visiting friends/relatives,119920
+1997-01,Visiting friends/relatives,62700
+1997-02,Visiting friends/relatives,61900
+1997-03,Visiting friends/relatives,74470
+1997-04,Visiting friends/relatives,60160
+1997-05,Visiting friends/relatives,45690
+1997-06,Visiting friends/relatives,55150
+1997-07,Visiting friends/relatives,65250
+1997-08,Visiting friends/relatives,53830
+1997-09,Visiting friends/relatives,62490
+1997-10,Visiting friends/relatives,69320
+1997-11,Visiting friends/relatives,74340
+1997-12,Visiting friends/relatives,132290
+1998-01,Visiting friends/relatives,66590
+1998-02,Visiting friends/relatives,66320
+1998-03,Visiting friends/relatives,73880
+1998-04,Visiting friends/relatives,78490
+1998-05,Visiting friends/relatives,52340
+1998-06,Visiting friends/relatives,59380
+1998-07,Visiting friends/relatives,62270
+1998-08,Visiting friends/relatives,51160
+1998-09,Visiting friends/relatives,51120
+1998-10,Visiting friends/relatives,69650
+1998-11,Visiting friends/relatives,81320
+1998-12,Visiting friends/relatives,129920
+1999-01,Visiting friends/relatives,69270
+1999-02,Visiting friends/relatives,66560
+1999-03,Visiting friends/relatives,82060
+1999-04,Visiting friends/relatives,63050
+1999-05,Visiting friends/relatives,51020
+1999-06,Visiting friends/relatives,59860
+1999-07,Visiting friends/relatives,67640
+1999-08,Visiting friends/relatives,56710
+1999-09,Visiting friends/relatives,66990
+1999-10,Visiting friends/relatives,76970
+1999-11,Visiting friends/relatives,83620
+1999-12,Visiting friends/relatives,120680
+2000-01,Visiting friends/relatives,66130
+2000-02,Visiting friends/relatives,74280
+2000-03,Visiting friends/relatives,76300
+2000-04,Visiting friends/relatives,87740
+2000-05,Visiting friends/relatives,57480
+2000-06,Visiting friends/relatives,69630
+2000-07,Visiting friends/relatives,76530
+2000-08,Visiting friends/relatives,70280
+2000-09,Visiting friends/relatives,61460
+2000-10,Visiting friends/relatives,83230
+2000-11,Visiting friends/relatives,92200
+2000-12,Visiting friends/relatives,162660
+2001-01,Visiting friends/relatives,81190
+2001-02,Visiting friends/relatives,80470
+2001-03,Visiting friends/relatives,90260
+2001-04,Visiting friends/relatives,90930
+2001-05,Visiting friends/relatives,61450
+2001-06,Visiting friends/relatives,69910
+2001-07,Visiting friends/relatives,70290
+2001-08,Visiting friends/relatives,59800
+2001-09,Visiting friends/relatives,65710
+2001-10,Visiting friends/relatives,64210
+2001-11,Visiting friends/relatives,72340
+2001-12,Visiting friends/relatives,135800
+2002-01,Visiting friends/relatives,65220
+2002-02,Visiting friends/relatives,68140
+2002-03,Visiting friends/relatives,87700
+2002-04,Visiting friends/relatives,63200
+2002-05,Visiting friends/relatives,45680
+2002-06,Visiting friends/relatives,56630
+2002-07,Visiting friends/relatives,61160
+2002-08,Visiting friends/relatives,50840
+2002-09,Visiting friends/relatives,57640
+2002-10,Visiting friends/relatives,72890
+2002-11,Visiting friends/relatives,76870
+2002-12,Visiting friends/relatives,141610
+2003-01,Visiting friends/relatives,69290
+2003-02,Visiting friends/relatives,69560
+2003-03,Visiting friends/relatives,74890
+2003-04,Visiting friends/relatives,77500
+2003-05,Visiting friends/relatives,52680
+2003-06,Visiting friends/relatives,59850
+2003-07,Visiting friends/relatives,71850
+2003-08,Visiting friends/relatives,63970
+2003-09,Visiting friends/relatives,71760
+2003-10,Visiting friends/relatives,79420
+2003-11,Visiting friends/relatives,87320
+2003-12,Visiting friends/relatives,154120
+2004-01,Visiting friends/relatives,74140
+2004-02,Visiting friends/relatives,77650
+2004-03,Visiting friends/relatives,86710
+2004-04,Visiting friends/relatives,89280
+2004-05,Visiting friends/relatives,60690
+2004-06,Visiting friends/relatives,68900
+2004-07,Visiting friends/relatives,86330
+2004-08,Visiting friends/relatives,74280
+2004-09,Visiting friends/relatives,87470
+2004-10,Visiting friends/relatives,92630
+2004-11,Visiting friends/relatives,96390
+2004-12,Visiting friends/relatives,176430
+2005-01,Visiting friends/relatives,90900
+2005-02,Visiting friends/relatives,94010
+2005-03,Visiting friends/relatives,118340
+2005-04,Visiting friends/relatives,90410
+2005-05,Visiting friends/relatives,70170
+2005-06,Visiting friends/relatives,81770
+2005-07,Visiting friends/relatives,90770
+2005-08,Visiting friends/relatives,76010
+2005-09,Visiting friends/relatives,89300
+2005-10,Visiting friends/relatives,92370
+2005-11,Visiting friends/relatives,95660
+2005-12,Visiting friends/relatives,185650
+2006-01,Visiting friends/relatives,89210
+2006-02,Visiting friends/relatives,90190
+2006-03,Visiting friends/relatives,103700
+2006-04,Visiting friends/relatives,107870
+2006-05,Visiting friends/relatives,67410
+2006-06,Visiting friends/relatives,82450
+2006-07,Visiting friends/relatives,88250
+2006-08,Visiting friends/relatives,78240
+2006-09,Visiting friends/relatives,91620
+2006-10,Visiting friends/relatives,96990
+2006-11,Visiting friends/relatives,102250
+2006-12,Visiting friends/relatives,192590
+2007-01,Visiting friends/relatives,89810
+2007-02,Visiting friends/relatives,98070
+2007-03,Visiting friends/relatives,116920
+2007-04,Visiting friends/relatives,101680
+2007-05,Visiting friends/relatives,77660
+2007-06,Visiting friends/relatives,86170
+2007-07,Visiting friends/relatives,91460
+2007-08,Visiting friends/relatives,88060
+2007-09,Visiting friends/relatives,99760
+2007-10,Visiting friends/relatives,99180
+2007-11,Visiting friends/relatives,113910
+2007-12,Visiting friends/relatives,195860
+2008-01,Visiting friends/relatives,89620
+2008-02,Visiting friends/relatives,105780
+2008-03,Visiting friends/relatives,128140
+2008-04,Visiting friends/relatives,103650
+2008-05,Visiting friends/relatives,86300
+2008-06,Visiting friends/relatives,90270
+2008-07,Visiting friends/relatives,90310
+2008-08,Visiting friends/relatives,91950
+2008-09,Visiting friends/relatives,100930
+2008-10,Visiting friends/relatives,105030
+2008-11,Visiting friends/relatives,115950
+2008-12,Visiting friends/relatives,206550
+2009-01,Visiting friends/relatives,99750
+2009-02,Visiting friends/relatives,109860
+2009-03,Visiting friends/relatives,123890
+2009-04,Visiting friends/relatives,130530
+2009-05,Visiting friends/relatives,101410
+2009-06,Visiting friends/relatives,97620
+2009-07,Visiting friends/relatives,112860
+2009-08,Visiting friends/relatives,99420
+2009-09,Visiting friends/relatives,115930
+2009-10,Visiting friends/relatives,121730
+2009-11,Visiting friends/relatives,128760
+2009-12,Visiting friends/relatives,229180
+2010-01,Visiting friends/relatives,106320
+2010-02,Visiting friends/relatives,118060
+2010-03,Visiting friends/relatives,139360
+2010-04,Visiting friends/relatives,117600
+2010-05,Visiting friends/relatives,93300
+2010-06,Visiting friends/relatives,103480
+2010-07,Visiting friends/relatives,111900
+2010-08,Visiting friends/relatives,107370
+2010-09,Visiting friends/relatives,121040
+2010-10,Visiting friends/relatives,124060
+2010-11,Visiting friends/relatives,131680
+2010-12,Visiting friends/relatives,239650
+2011-01,Visiting friends/relatives,109140
+2011-02,Visiting friends/relatives,118570
+2011-03,Visiting friends/relatives,131880
+2011-04,Visiting friends/relatives,144690
+2011-05,Visiting friends/relatives,96080
+2011-06,Visiting friends/relatives,99340
+2011-07,Visiting friends/relatives,116210
+2011-08,Visiting friends/relatives,110030
+2011-09,Visiting friends/relatives,113920
+2011-10,Visiting friends/relatives,121810
+2011-11,Visiting friends/relatives,133970
+2011-12,Visiting friends/relatives,245100
+2012-01,Visiting friends/relatives,117810
+2012-02,Visiting friends/relatives,128620
+2012-03,Visiting friends/relatives,151910
+2012-04,Visiting friends/relatives,130030
+2012-05,Visiting friends/relatives,100540
+2012-06,Visiting friends/relatives,112650
+2012-07,Visiting friends/relatives,113560
+2012-08,Visiting friends/relatives,119750
+2012-09,Visiting friends/relatives,127590
+2012-10,Visiting friends/relatives,130210
+2012-11,Visiting friends/relatives,148650
+2012-12,Visiting friends/relatives,264130
+2013-01,Visiting friends/relatives,116080
+2013-02,Visiting friends/relatives,136420
+2013-03,Visiting friends/relatives,172020
+2013-04,Visiting friends/relatives,123830
+2013-05,Visiting friends/relatives,107620
+2013-06,Visiting friends/relatives,117940
+2013-07,Visiting friends/relatives,126650
+2013-08,Visiting friends/relatives,129380
+2013-09,Visiting friends/relatives,141780
+2013-10,Visiting friends/relatives,149660
+2013-11,Visiting friends/relatives,162670
+2013-12,Visiting friends/relatives,298440
+2014-01,Visiting friends/relatives,149480
+2014-02,Visiting friends/relatives,155520
+2014-03,Visiting friends/relatives,166600
+2014-04,Visiting friends/relatives,168280
+2014-05,Visiting friends/relatives,126950
+2014-06,Visiting friends/relatives,129060
+2014-07,Visiting friends/relatives,139090
+2014-08,Visiting friends/relatives,131920
+2014-09,Visiting friends/relatives,144780
+2014-10,Visiting friends/relatives,151570
+2014-11,Visiting friends/relatives,166530
+2014-12,Visiting friends/relatives,309900
+2015-01,Visiting friends/relatives,156120
+2015-02,Visiting friends/relatives,182970
+2015-03,Visiting friends/relatives,197270
+2015-04,Visiting friends/relatives,159190
+2015-05,Visiting friends/relatives,129040
+2015-06,Visiting friends/relatives,135800
+2015-07,Visiting friends/relatives,152820
+2015-08,Visiting friends/relatives,153840
+2015-09,Visiting friends/relatives,172830
+2015-10,Visiting friends/relatives,157870
+2015-11,Visiting friends/relatives,162210
+2015-12,Visiting friends/relatives,309180
+2016-01,Visiting friends/relatives,141100
+2016-02,Visiting friends/relatives,166240
+2016-03,Visiting friends/relatives,203430
+2016-04,Visiting friends/relatives,153910
+2016-05,Visiting friends/relatives,126370
+2016-06,Visiting friends/relatives,147610
+2016-07,Visiting friends/relatives,152870
+2016-08,Visiting friends/relatives,144560
+2016-09,Visiting friends/relatives,168600
+2016-10,Visiting friends/relatives,161380
+2016-11,Visiting friends/relatives,178660
+2016-12,Visiting friends/relatives,335630
+2017-01,Visiting friends/relatives,155430
+2017-02,Visiting friends/relatives,173020
+2017-03,Visiting friends/relatives,197560
+2017-04,Visiting friends/relatives,189970
+2017-05,Visiting friends/relatives,142390
+2017-06,Visiting friends/relatives,163990
+2017-07,Visiting friends/relatives,180340
+2017-08,Visiting friends/relatives,182190
+2017-09,Visiting friends/relatives,198240
+2017-10,Visiting friends/relatives,204680
+2017-11,Visiting friends/relatives,230170
+2017-12,Visiting friends/relatives,418420
+2018-01,Visiting friends/relatives,199220
+2018-02,Visiting friends/relatives,227550
+2018-03,Visiting friends/relatives,277620
+2018-04,Visiting friends/relatives,206060
+2018-05,Visiting friends/relatives,184850
+2018-06,Visiting friends/relatives,205960
+2018-07,Visiting friends/relatives,199130
+2018-08,Visiting friends/relatives,204640
+2018-09,Visiting friends/relatives,203970
+2018-10,Visiting friends/relatives,219580
+2018-11,Visiting friends/relatives,236530
+2018-12,Visiting friends/relatives,425550
+2019-01,Visiting friends/relatives,197380
+2019-02,Visiting friends/relatives,232090
+2019-03,Visiting friends/relatives,239850
+2019-04,Visiting friends/relatives,236910
+2019-05,Visiting friends/relatives,197500
+2019-06,Visiting friends/relatives,199820
+2019-07,Visiting friends/relatives,208710
+2019-08,Visiting friends/relatives,210020
+2019-09,Visiting friends/relatives,212680
+2019-10,Visiting friends/relatives,224700
+2019-11,Visiting friends/relatives,242730
+2019-12,Visiting friends/relatives,443530
+2020-01,Visiting friends/relatives,210820
+2020-02,Visiting friends/relatives,209610
+2020-03,Visiting friends/relatives,112410
+2020-04,Visiting friends/relatives,810
+2020-05,Visiting friends/relatives,1260
+2020-06,Visiting friends/relatives,1980
+2020-07,Visiting friends/relatives,1430
+2020-08,Visiting friends/relatives,1110
+2020-09,Visiting friends/relatives,1360
+2020-10,Visiting friends/relatives,2420
+2020-11,Visiting friends/relatives,3950
+2020-12,Visiting friends/relatives,5350
+2021-01,Visiting friends/relatives,2810
+2021-02,Visiting friends/relatives,2450
+2021-03,Visiting friends/relatives,3610
+2021-04,Visiting friends/relatives,14520
+2021-05,Visiting friends/relatives,21520
+2021-06,Visiting friends/relatives,21110
+2021-07,Visiting friends/relatives,11000
+2021-08,Visiting friends/relatives,1700
+2021-09,Visiting friends/relatives,970
+2021-10,Visiting friends/relatives,900
+2021-11,Visiting friends/relatives,14020
+2021-12,Visiting friends/relatives,53400
+2022-01,Visiting friends/relatives,35940
+2022-02,Visiting friends/relatives,49830
+2022-03,Visiting friends/relatives,104650
+2022-04,Visiting friends/relatives,146440
+2022-05,Visiting friends/relatives,114360
+2022-06,Visiting friends/relatives,133610
+2022-07,Visiting friends/relatives,140080
+2022-08,Visiting friends/relatives,148450
+2022-09,Visiting friends/relatives,160560
+2022-10,Visiting friends/relatives,167770
+2022-11,Visiting friends/relatives,210980
+2022-12,Visiting friends/relatives,355010
+2023-01,Visiting friends/relatives,143080
+2023-02,Visiting friends/relatives,201350
+2023-03,Visiting friends/relatives,242070
+2023-04,Visiting friends/relatives,222680
+2023-05,Visiting friends/relatives,182590
+2023-06,Visiting friends/relatives,200990
+2023-07,Visiting friends/relatives,184060
+2023-08,Visiting friends/relatives,198430
+2023-09,Visiting friends/relatives,205360
+2023-10,Visiting friends/relatives,203690
+2023-11,Visiting friends/relatives,236280
+2023-12,Visiting friends/relatives,407450
+2024-01,Visiting friends/relatives,186650
+2024-02,Visiting friends/relatives,242720
+2024-03,Visiting friends/relatives,274720
+2024-04,Visiting friends/relatives,199380
+2024-05,Visiting friends/relatives,197920
+2024-06,Visiting friends/relatives,203340
+2024-07,Visiting friends/relatives,191260
+2024-08,Visiting friends/relatives,202390
+2024-09,Visiting friends/relatives,208900
+2024-10,Visiting friends/relatives,220890
+2024-11,Visiting friends/relatives,243440
+2024-12,Visiting friends/relatives,438280
+2025-01,Visiting friends/relatives,208860
+2025-02,Visiting friends/relatives,226360
+2025-03,Visiting friends/relatives,254700
+2025-04,Visiting friends/relatives,240910
+2025-05,Visiting friends/relatives,205500
+2025-06,Visiting friends/relatives,206880
+2025-07,Visiting friends/relatives,213660
+2025-08,Visiting friends/relatives,217380
+2025-09,Visiting friends/relatives,224460
+2025-10,Visiting friends/relatives,227590
+2025-11,Visiting friends/relatives,265380
+2025-12,Visiting friends/relatives,463870
+2026-01,Visiting friends/relatives,209760
+2026-02,Visiting friends/relatives,252190
+2026-03,Visiting friends/relatives,263210
+2026-04,Visiting friends/relatives,212710
+2026-05,Visiting friends/relatives,187240
+2026-06,Visiting friends/relatives,185000
+2026-07,Visiting friends/relatives,200220

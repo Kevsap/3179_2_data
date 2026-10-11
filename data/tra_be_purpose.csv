@@ -1,0 +1,46 @@
+traveller_type,year,role,event_type,visitors_000,pct_business,pct_employment,pct_leisure,pct_other
+All visitors,2025,Attend,Business meeting,11406,81,,17,3
+All visitors,2025,Attend,Corporate event,2054,80,,18,3
+All visitors,2025,Attend,Other business event,7307,63,,31,7
+All visitors,2025,Attend,Attend event total,18937,75,,22,4
+All visitors,2025,Accompany,Business meeting,1562,71,,23,6
+All visitors,2025,Accompany,Corporate event,473,42,,53,5
+All visitors,2025,Accompany,Other business event,1940,36,,54,10
+All visitors,2025,Accompany,Accompany to event total,3628,50,,42,9
+All visitors,2025,Total,Business event total,20676,71,,25,5
+Domestic overnight,2025,Attend,Business meeting,4865,80,,20,2
+Domestic overnight,2025,Attend,Corporate event,969,81,,17,3
+Domestic overnight,2025,Attend,Other business event,2993,72,,24,6
+Domestic overnight,2025,Attend,Attend event total,7891,76,,22,4
+Domestic overnight,2025,Accompany,Business meeting,601,68,,30,3
+Domestic overnight,2025,Accompany,Corporate event,295,53,,40,8
+Domestic overnight,2025,Accompany,Other business event,719,40,,51,11
+Domestic overnight,2025,Accompany,Accompany to event total,1441,51,,42,8
+Domestic overnight,2025,Total,Business event total,8508,73,,25,4
+Domestic daytrips,2025,Attend,Business meeting,6091,81,,16,3
+Domestic daytrips,2025,Attend,Corporate event,1017,79,,18,3
+Domestic daytrips,2025,Attend,Other business event,3982,55,,39,7
+Domestic daytrips,2025,Attend,Attend event total,10346,73,,23,5
+Domestic daytrips,2025,Accompany,Business meeting,922,73,,19,9
+Domestic daytrips,2025,Accompany,Corporate event,171,24,,76,0
+Domestic daytrips,2025,Accompany,Other business event,1174,32,,57,10
+Domestic daytrips,2025,Accompany,Accompany to event total,2108,48,,42,9
+Domestic daytrips,2025,Total,Business event total,11437,68,,26,6
+International,2025,Attend,Business meeting,450,86,5,8,1
+International,2025,Attend,Corporate event,68,75,11,13,1
+International,2025,Attend,Other business event,332,81,6,11,3
+International,2025,Attend,Attend event total,700,82,6,11,1
+International,2025,Accompany,Business meeting,39,85,1,13,1
+International,2025,Accompany,Corporate event,7,58,4,32,6
+International,2025,Accompany,Other business event,47,63,2,33,2
+International,2025,Accompany,Accompany to event total,79,70,1,27,1
+International,2025,Total,Business event total,731,80,6,13,1
+International,2024,Attend,Business meeting,493,85,6,8,1
+International,2024,Attend,Corporate event,39,71,21,7,1
+International,2024,Attend,Other business event,338,79,6,12,3
+International,2024,Attend,Attend event total,756,82,6,11,1
+International,2024,Accompany,Business meeting,59,80,8,9,2
+International,2024,Accompany,Corporate event,6,40,32,28,0
+International,2024,Accompany,Other business event,44,66,4,25,4
+International,2024,Accompany,Accompany to event total,90,71,7,20,2
+International,2024,Total,Business event total,783,81,6,12,1

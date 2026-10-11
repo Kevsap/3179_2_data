@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "C4 - Calendar heatmap of monthly short-term visitor arrivals to Australia by main reason for journey (year x month). Darker = more arrivals. Radio buttons switch between convention/conference and business visitors. Source: ABS Overseas Arrivals and Departures (OAD_REASON).",
+  "width": 840,
+  "height": 260,
+  "data": {
+    "url": "data/oad_reason_monthly.csv",
+    "format": {
+      "parse": {
+        "month": "date:'%Y-%m'",
+        "arrivals": "number"
+      }
+    }
+  },
+  "params": [
+    {
+      "name": "reason_pick",
+      "value": "Convention/conference",
+      "bind": {
+        "input": "radio",
+        "options": [
+          "Convention/conference",
+          "Business"
+        ],
+        "name": "Show visitors who came for: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.reason === reason_pick"
+    }
+  ],
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "month",
+      "timeUnit": "year",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelAngle": -90,
+        "labelFontSize": 10
+      }
+    },
+    "y": {
+      "field": "month",
+      "timeUnit": "month",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "format": "%b"
+      }
+    },
+    "color": {
+      "field": "arrivals",
+      "type": "quantitative",
+      "title": "Arrivals",
+      "scale": {
+        "scheme": "purples"
+      },
+      "legend": {
+        "format": "~s",
+        "orient": "right",
+        "gradientLength": 200
+      }
+    },
+    "tooltip": [
+      {
+        "field": "month",
+        "type": "temporal",
+        "title": "Month",
+        "format": "%B %Y"
+      },
+      {
+        "field": "reason",
+        "type": "nominal",
+        "title": "Reason"
+      },
+      {
+        "field": "arrivals",
+        "type": "quantitative",
+        "title": "Arrivals",
+        "format": ","
+      }
+    ]
+  },
+  "config": {
+    "font": "Source Sans 3, Helvetica, Arial, sans-serif",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#4a4552",
+      "domain": false,
+      "ticks": false
+    },
+    "legend": {
+      "labelColor": "#4a4552",
+      "titleColor": "#4a4552"
+    },
+    "background": "transparent"
+  }
+}

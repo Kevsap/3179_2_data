@@ -1,0 +1,40 @@
+city,state_code,year,rank,meetings,source
+Sydney,NSW,2019,20,93,ICCA Statistics Report Country & City Rankings 2019
+Melbourne,VIC,2019,48,54,ICCA Statistics Report Country & City Rankings 2019
+Brisbane,QLD,2019,66,41,ICCA Statistics Report Country & City Rankings 2019
+Perth,WA,2019,183,16,ICCA Statistics Report Country & City Rankings 2019
+Adelaide,SA,2019,210,13,ICCA Statistics Report Country & City Rankings 2019
+Gold Coast,QLD,2019,210,13,ICCA Statistics Report Country & City Rankings 2019
+Canberra,ACT,2019,289,9,ICCA Statistics Report Country & City Rankings 2019
+Cairns,QLD,2019,332,7,ICCA Statistics Report Country & City Rankings 2019
+Hobart,TAS,2019,424,5,ICCA Statistics Report Country & City Rankings 2019
+Sydney,NSW,2022,55,34,ICCA Rankings 2022 press copy
+Melbourne,VIC,2022,60,31,ICCA Rankings 2022 press copy
+Brisbane,QLD,2022,138,15,ICCA Rankings 2022 press copy
+Adelaide,SA,2022,186,10,ICCA Rankings 2022 press copy
+Perth,WA,2022,186,10,ICCA Rankings 2022 press copy
+Gold Coast,QLD,2022,256,7,ICCA Rankings 2022 press copy
+Cairns,QLD,2022,326,5,ICCA Rankings 2022 press copy
+Sydney,NSW,2023,25,,micenet (mice.net.au) report on ICCA 2023 rankings
+Melbourne,VIC,2023,35,,micenet (mice.net.au) report on ICCA 2023 rankings
+Brisbane,QLD,2023,76,,micenet (mice.net.au) report on ICCA 2023 rankings
+Adelaide,SA,2023,150,,micenet (mice.net.au) report on ICCA 2023 rankings
+Gold Coast,QLD,2023,184,,micenet (mice.net.au) report on ICCA 2023 rankings
+Cairns,QLD,2023,212,,micenet (mice.net.au) report on ICCA 2023 rankings
+Perth,WA,2023,228,9,micenet (mice.net.au) report on ICCA 2023 and 2024 rankings
+Hobart,TAS,2023,248,,micenet (mice.net.au) report on ICCA 2023 rankings
+Darwin,NT,2023,270,,micenet (mice.net.au) report on ICCA 2023 rankings
+Sydney,NSW,2024,30,,micenet (mice.net.au) report on ICCA 2024 rankings
+Melbourne,VIC,2024,31,,micenet (mice.net.au) report on ICCA 2024 rankings
+Brisbane,QLD,2024,94,,micenet (mice.net.au) report on ICCA 2024 rankings
+Perth,WA,2024,105,24,micenet (mice.net.au) report on ICCA 2024 rankings
+Adelaide,SA,2024,219,,micenet (mice.net.au) report on ICCA 2024 rankings
+Gold Coast,QLD,2024,293,,micenet (mice.net.au) report on ICCA 2025 rankings
+Darwin,NT,2024,323,,micenet (mice.net.au) report on ICCA 2024 rankings
+Cairns,QLD,2024,432,,micenet (mice.net.au) report on ICCA 2024 rankings
+Sydney,NSW,2025,37,,micenet (mice.net.au) report on ICCA 2025 rankings
+Brisbane,QLD,2025,49,,micenet (mice.net.au) report on ICCA 2025 rankings
+Melbourne,VIC,2025,58,,micenet (mice.net.au) report on ICCA 2025 rankings
+Perth,WA,2025,151,18,micenet (mice.net.au) report on ICCA 2025 rankings (24 in 2024 minus 6)
+Adelaide,SA,2025,198,,micenet (mice.net.au) report on ICCA 2025 rankings
+Gold Coast,QLD,2025,211,,micenet (mice.net.au) report on ICCA 2025 rankings

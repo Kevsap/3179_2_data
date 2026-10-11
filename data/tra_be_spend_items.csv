@@ -1,0 +1,47 @@
+traveller_type,year,item,spend_m,share_pct
+All visitors,2025,"Food, drink & accommodation",7513,40
+All visitors,2025,Domestic airfares,3845,20
+All visitors,2025,Transportation,3062,16
+All visitors,2025,International airfares,1399,7
+All visitors,2025,Shopping,925,5
+All visitors,2025,Other,834,4
+All visitors,2025,Business event registration,667,4
+All visitors,2025,Entertainment,325,2
+All visitors,2025,Package Tours,206,1
+All visitors,2025,Organised Tours,177,1
+Domestic overnight,2025,Airfares,3247,27
+Domestic overnight,2025,Accommodation,3105,26
+Domestic overnight,2025,Transportation,2064,17
+Domestic overnight,2025,Takeaways and restaurant meals,1492,12
+Domestic overnight,2025,Business event registration,439,4
+Domestic overnight,2025,Shopping,434,4
+Domestic overnight,2025,Other alcohol & drink,360,3
+Domestic overnight,2025,Groceries for self-catering,227,2
+Domestic overnight,2025,Entertainment,174,1
+Domestic overnight,2025,Tours,67,1
+Domestic daytrips,2025,"Food, drink & accommodation",821,29
+Domestic daytrips,2025,Transportation,804,28
+Domestic daytrips,2025,Airfares,559,19
+Domestic daytrips,2025,Shopping,225,8
+Domestic daytrips,2025,Other,158,5
+Domestic daytrips,2025,Business event registration,114,4
+Domestic daytrips,2025,Entertainment,106,4
+Domestic daytrips,2025,Tours,92,3
+International,2025,"Food, drink & accommodation",1508,38
+International,2025,International airfares,1399,35
+International,2025,Shopping,267,7
+International,2025,Package Tours,206,5
+International,2025,Transportation,195,5
+International,2025,Business event registration,114,3
+International,2025,Entertainment,44,1
+International,2025,Domestic airfares,40,1
+International,2025,Organised Tours,19,
+International,2024,"Food, drink & accommodation",1622,38
+International,2024,International airfares,1503,35
+International,2024,Shopping,264,6
+International,2024,Package Tours,241,6
+International,2024,Transportation,231,5
+International,2024,Business event registration,146,3
+International,2024,Domestic airfares,36,1
+International,2024,Entertainment,35,1
+International,2024,Organised Tours,26,1

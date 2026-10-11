@@ -1,0 +1,33 @@
+state,state_code,traveller_type,visitors_000,nights_000,spend_in_state_m,pct_of_state_visitors,pct_of_state_nights,pct_of_state_spend
+New South Wales,NSW,Domestic day,3661,,1197,,,
+New South Wales,NSW,Domestic overnight,3200,8611,3723,,,
+New South Wales,NSW,International,343,5512,928,,,
+New South Wales,NSW,Total,7205,14123,5848,5.7,6.3,9.7
+Victoria,VIC,Domestic day,3351,,821,,,
+Victoria,VIC,Domestic overnight,2103,5727,2360,,,
+Victoria,VIC,International,245,3080,530,,,
+Victoria,VIC,Total,5699,8807,3711,4.8,5.3,7.9
+Queensland,QLD,Domestic day,2780,,445,,,
+Queensland,QLD,Domestic overnight,2084,6053,2797,,,
+Queensland,QLD,International,174,2023,424,,,
+Queensland,QLD,Total,5038,8076,3665,6.0,5.5,8.3
+South Australia,SA,Domestic day,465,,112,,,
+South Australia,SA,Domestic overnight,596,1814,770,,,
+South Australia,SA,International,44,598,97,,,
+South Australia,SA,Total,1105,2412,980,4.5,6.0,8.9
+Western Australia,WA,Domestic day,704,,153,,,
+Western Australia,WA,Domestic overnight,610,2258,1291,,,
+Western Australia,WA,International,88,2858,263,,,
+Western Australia,WA,Total,1402,5116,1707,3.5,6.6,8.9
+Tasmania,TAS,Domestic day,199,,39,,,
+Tasmania,TAS,Domestic overnight,249,618,286,,,
+Tasmania,TAS,International,14,168,23,,,
+Tasmania,TAS,Total,463,786,348,5.9,5.0,7.8
+Northern Territory,NT,Domestic day,23,,34,,,
+Northern Territory,NT,Domestic overnight,198,578,323,,,
+Northern Territory,NT,International,14,178,36,,,
+Northern Territory,NT,Total,234,756,393,9.5,8.7,15.6
+Australian Capital Territory,ACT,Domestic day,254,,76,,,
+Australian Capital Territory,ACT,Domestic overnight,366,985,466,,,
+Australian Capital Territory,ACT,International,18,224,38,,,
+Australian Capital Territory,ACT,Total,638,1209,580,14.1,10.2,18.4
