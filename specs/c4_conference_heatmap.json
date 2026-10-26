@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "C4 - Calendar heatmap of monthly short-term visitor arrivals to Australia by main reason for journey (year x month). Darker = more arrivals. Radio buttons switch between convention/conference and business visitors. Source: ABS Overseas Arrivals and Departures (OAD_REASON).",
+  "description": "C4 - Calendar heatmap (year x month) of short-term visitor arrivals to Australia by main reason for journey. Each cell compares that month with the same year's monthly average (100% = an average month), so long-term growth does not hide the seasonal pattern and the colour scale means the same thing for every year and both reasons. Purple = busier than usual, orange = quieter. COVID border years (2020-2022) and the incomplete 2026 are greyed out. Radio buttons switch between convention/conference and business visitors. Source: ABS Overseas Arrivals and Departures (OAD_REASON).",
   "width": 840,
   "height": 260,
   "data": {
@@ -29,66 +29,40 @@
   "transform": [
     {
       "filter": "datum.reason === reason_pick"
+    },
+    {
+      "calculate": "year(datum.month)",
+      "as": "yr"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "mean",
+          "field": "arrivals",
+          "as": "year_mean"
+        },
+        {
+          "op": "count",
+          "as": "months_in_year"
+        }
+      ],
+      "groupby": [
+        "yr"
+      ]
+    },
+    {
+      "calculate": "(datum.yr >= 2020 && datum.yr <= 2022) || datum.months_in_year < 12",
+      "as": "excluded"
+    },
+    {
+      "calculate": "datum.excluded ? null : datum.arrivals / datum.year_mean",
+      "as": "vs_year"
+    },
+    {
+      "calculate": "datum.months_in_year < 12 ? 'Part year, not compared' : datum.excluded ? 'COVID border closures, not compared' : format(datum.vs_year, '.0%') + ' of an average month that year'",
+      "as": "vs_label"
     }
   ],
-  "mark": {
-    "type": "rect",
-    "stroke": "white",
-    "strokeWidth": 1
-  },
-  "encoding": {
-    "x": {
-      "field": "month",
-      "timeUnit": "year",
-      "type": "ordinal",
-      "title": null,
-      "axis": {
-        "labelAngle": -90,
-        "labelFontSize": 10
-      }
-    },
-    "y": {
-      "field": "month",
-      "timeUnit": "month",
-      "type": "ordinal",
-      "title": null,
-      "axis": {
-        "format": "%b"
-      }
-    },
-    "color": {
-      "field": "arrivals",
-      "type": "quantitative",
-      "title": "Arrivals",
-      "scale": {
-        "scheme": "purples"
-      },
-      "legend": {
-        "format": "~s",
-        "orient": "right",
-        "gradientLength": 200
-      }
-    },
-    "tooltip": [
-      {
-        "field": "month",
-        "type": "temporal",
-        "title": "Month",
-        "format": "%B %Y"
-      },
-      {
-        "field": "reason",
-        "type": "nominal",
-        "title": "Reason"
-      },
-      {
-        "field": "arrivals",
-        "type": "quantitative",
-        "title": "Arrivals",
-        "format": ","
-      }
-    ]
-  },
   "config": {
     "font": "Source Sans 3, Helvetica, Arial, sans-serif",
     "view": {
@@ -101,8 +75,201 @@
     },
     "legend": {
       "labelColor": "#4a4552",
-      "titleColor": "#4a4552"
+      "titleColor": "#4a4552",
+      "titleFontWeight": "normal"
     },
     "background": "transparent"
-  }
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.excluded"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "month",
+          "timeUnit": "year",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "labelAngle": -90,
+            "labelFontSize": 10
+          }
+        },
+        "y": {
+          "field": "month",
+          "timeUnit": "month",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "format": "%b"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "month",
+            "type": "temporal",
+            "title": "Month",
+            "format": "%B %Y"
+          },
+          {
+            "field": "reason",
+            "type": "nominal",
+            "title": "Reason"
+          },
+          {
+            "field": "arrivals",
+            "type": "quantitative",
+            "title": "Arrivals",
+            "format": ","
+          },
+          {
+            "field": "vs_label",
+            "type": "nominal",
+            "title": "Compared with year"
+          }
+        ],
+        "color": {
+          "value": "#cfcbd4"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "!datum.excluded"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "month",
+          "timeUnit": "year",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "labelAngle": -90,
+            "labelFontSize": 10
+          }
+        },
+        "y": {
+          "field": "month",
+          "timeUnit": "month",
+          "type": "ordinal",
+          "title": null,
+          "axis": {
+            "format": "%b"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "month",
+            "type": "temporal",
+            "title": "Month",
+            "format": "%B %Y"
+          },
+          {
+            "field": "reason",
+            "type": "nominal",
+            "title": "Reason"
+          },
+          {
+            "field": "arrivals",
+            "type": "quantitative",
+            "title": "Arrivals",
+            "format": ","
+          },
+          {
+            "field": "vs_label",
+            "type": "nominal",
+            "title": "Compared with year"
+          }
+        ],
+        "color": {
+          "field": "vs_year",
+          "type": "quantitative",
+          "title": [
+            "Compared with",
+            "that year's",
+            "average month"
+          ],
+          "scale": {
+            "scheme": "purpleorange",
+            "reverse": true,
+            "domain": [
+              0.4,
+              1.6
+            ],
+            "domainMid": 1,
+            "clamp": true
+          },
+          "legend": {
+            "format": ".0%",
+            "orient": "right",
+            "gradientLength": 200,
+            "values": [
+              0.4,
+              0.7,
+              1,
+              1.3,
+              1.6
+            ]
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "month": "2021-06-15",
+            "label": "Borders"
+          },
+          {
+            "month": "2021-07-15",
+            "label": "closed"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "calculate": "toDate(datum.month)",
+          "as": "month"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#4a4552",
+        "baseline": "middle"
+      },
+      "encoding": {
+        "x": {
+          "field": "month",
+          "timeUnit": "year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "month",
+          "timeUnit": "month",
+          "type": "ordinal"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ]
 }

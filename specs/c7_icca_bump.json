@@ -1,213 +1,80 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "C7 - Bump chart of world rankings for international association meetings for six Australian cities, 2019 and 2022-2025 (2020-21 not ranked in available sources). Lower rank number = better; log scale. Hover a line to highlight a city. Sources: ICCA Country & City Rankings 2019 and 2022; micenet (mice.net.au) reports on ICCA 2023, 2024 and 2025 rankings.",
+  "description": "C7 - Bump chart of six Australian cities ranked against each other (1 = most international association meetings) in 2019 and 2022-2025, using their ICCA world rankings. Each circle shows the city's world rank. 2020-21 not ranked in available sources. Hover a line to highlight a city. Sources: ICCA Country & City Rankings 2019 and 2022; micenet (mice.net.au) reports on ICCA 2023, 2024 and 2025 rankings.",
   "width": 540,
-  "height": 360,
+  "height": 330,
   "data": {
     "url": "data/icca_cities.csv",
-    "format": {
-      "parse": {
-        "year": "number",
-        "rank": "number"
-      }
-    }
+    "format": {"parse": {"year": "number", "rank": "number"}}
   },
   "transform": [
+    {"filter": "indexof(['Sydney','Melbourne','Brisbane','Perth','Adelaide','Gold Coast'], datum.city) >= 0"},
     {
-      "filter": "indexof(['Sydney','Melbourne','Brisbane','Perth','Adelaide','Gold Coast'], datum.city) >= 0"
-    }
+      "window": [{"op": "row_number", "as": "aus_pos"}],
+      "groupby": ["year"],
+      "sort": [{"field": "rank", "order": "ascending"}, {"field": "city", "order": "ascending"}]
+    },
+    {"calculate": "datum.rank % 100 >= 11 && datum.rank % 100 <= 13 ? 'th' : datum.rank % 10 === 1 ? 'st' : datum.rank % 10 === 2 ? 'nd' : datum.rank % 10 === 3 ? 'rd' : 'th'", "as": "suffix"},
+    {"calculate": "datum.rank + datum.suffix", "as": "world_rank_label"}
   ],
   "encoding": {
     "x": {
       "field": "year",
       "type": "ordinal",
       "title": null,
-      "axis": {
-        "labelAngle": 0,
-        "labelFontSize": 12,
-        "domain": false,
-        "ticks": false
-      },
-      "scale": {
-        "padding": 0.3
-      }
+      "axis": {"labelAngle": 0, "labelFontSize": 12, "domain": false, "ticks": false, "orient": "top"},
+      "scale": {"padding": 0.4}
     },
     "y": {
-      "field": "rank",
-      "type": "quantitative",
-      "title": "World rank (1 = most international meetings)",
-      "scale": {
-        "type": "log",
-        "reverse": true,
-        "domain": [
-          15,
-          320
-        ]
-      },
-      "axis": {
-        "values": [
-          20,
-          30,
-          50,
-          100,
-          200,
-          300
-        ]
-      }
+      "field": "aus_pos",
+      "type": "ordinal",
+      "title": "Position among the six cities",
+      "axis": {"labelFontSize": 12, "domain": false, "ticks": false, "labelExpr": "datum.value === 1 ? '1st' : datum.value === 2 ? '2nd' : datum.value === 3 ? '3rd' : datum.value + 'th'"}
     },
     "color": {
       "field": "city",
       "type": "nominal",
       "legend": null,
       "scale": {
-        "domain": [
-          "Sydney",
-          "Melbourne",
-          "Brisbane",
-          "Perth",
-          "Adelaide",
-          "Gold Coast"
-        ],
-        "range": [
-          "#5b2a86",
-          "#d9822b",
-          "#2a9d8f",
-          "#c0392b",
-          "#7f8c8d",
-          "#3a6ea5"
-        ]
+        "domain": ["Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide", "Gold Coast"],
+        "range": ["#5b2a86", "#d9822b", "#2a9d8f", "#c0392b", "#7f8c8d", "#3a6ea5"]
       }
     },
-    "opacity": {
-      "condition": {
-        "param": "pick",
-        "empty": true,
-        "value": 1
-      },
-      "value": 0.15
-    }
+    "opacity": {"condition": {"param": "pick", "empty": true, "value": 1}, "value": 0.15}
   },
   "layer": [
     {
-      "mark": {
-        "type": "line",
-        "strokeWidth": 3,
-        "point": false
-      },
+      "mark": {"type": "line", "strokeWidth": 4},
       "params": [
-        {
-          "name": "pick",
-          "select": {
-            "type": "point",
-            "fields": [
-              "city"
-            ],
-            "on": "pointerover",
-            "clear": "pointerout"
-          }
-        }
+        {"name": "pick", "select": {"type": "point", "fields": ["city"], "on": "pointerover", "clear": "pointerout"}}
       ]
     },
     {
-      "mark": {
-        "type": "circle",
-        "size": 110
-      },
+      "mark": {"type": "circle", "size": 620, "opacity": 1},
       "encoding": {
         "tooltip": [
-          {
-            "field": "city",
-            "title": "City"
-          },
-          {
-            "field": "year",
-            "title": "Year"
-          },
-          {
-            "field": "rank",
-            "title": "World rank"
-          },
-          {
-            "field": "meetings",
-            "title": "Meetings (if published)"
-          }
+          {"field": "city", "title": "City"},
+          {"field": "year", "title": "Year"},
+          {"field": "aus_pos", "title": "Position among the six"},
+          {"field": "world_rank_label", "title": "World rank"},
+          {"field": "meetings", "title": "Meetings (if published)"}
         ]
       }
     },
     {
-      "transform": [
-        {
-          "filter": "datum.year === 2025 && datum.city !== 'Adelaide' && datum.city !== 'Gold Coast'"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "dx": 10,
-        "fontSize": 12,
-        "fontWeight": "bold"
-      },
-      "encoding": {
-        "text": {
-          "field": "city"
-        }
-      }
+      "mark": {"type": "text", "fontSize": 10, "fontWeight": "bold", "color": "white", "baseline": "middle"},
+      "encoding": {"text": {"field": "rank"}, "color": {"value": "white"}}
     },
     {
-      "transform": [
-        {
-          "filter": "datum.year === 2025 && datum.city === 'Adelaide'"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "dx": 10,
-        "fontSize": 12,
-        "fontWeight": "bold",
-        "dy": -8
-      },
-      "encoding": {
-        "text": {
-          "field": "city"
-        }
-      }
-    },
-    {
-      "transform": [
-        {
-          "filter": "datum.year === 2025 && datum.city === 'Gold Coast'"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "dx": 10,
-        "fontSize": 12,
-        "fontWeight": "bold",
-        "dy": 8
-      },
-      "encoding": {
-        "text": {
-          "field": "city"
-        }
-      }
+      "transform": [{"filter": "datum.year === 2025"}],
+      "mark": {"type": "text", "align": "left", "dx": 18, "fontSize": 13, "fontWeight": "bold", "baseline": "middle"},
+      "encoding": {"text": {"field": "city"}}
     }
   ],
   "config": {
     "font": "Source Sans 3, Helvetica, Arial, sans-serif",
-    "view": {
-      "stroke": null
-    },
-    "axis": {
-      "labelColor": "#4a4552",
-      "titleColor": "#4a4552",
-      "titleFontWeight": "normal",
-      "gridColor": "#ece9f1"
-    },
-    "axisX": {
-      "grid": false
-    },
+    "view": {"stroke": null},
+    "axis": {"labelColor": "#4a4552", "titleColor": "#4a4552", "titleFontWeight": "normal", "grid": false},
     "background": "transparent"
   }
 }

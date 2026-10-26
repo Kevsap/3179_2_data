@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lanyards &amp; Luggage: Business Events Tourism in Australia</title>
   <meta name="description" content="A data story about conferences, conventions and business events tourism in Australia, 1991 to 2026.">
-  <meta name="author" content="KEVIN SAPUTRA">
+  <meta name="author" content="Kevin Saputra">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,9 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Vega, Vega-Lite and Vega-Embed -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.33.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.23.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.29.0"></script>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -28,6 +28,7 @@
       <p class="kicker">A data story about business events in Australia</p>
       <h1>Lanyards &amp; Luggage</h1>
       <p class="subtitle">The $17 billion visitors you never notice</p>
+      <p class="byline">By Kevin Saputra · FIT3179 Data Visualisation · October 2026</p>
       <p class="lede">Every year, millions of people travel across Australia, and from overseas, to attend a conference, an exhibition or a work meeting. They fill our hotels, eat in our restaurants and fly between our cities. This page follows where they come from, where they go, and how they came back after COVID.</p>
     </div>
     <div class="badge" aria-hidden="true">
@@ -105,7 +106,7 @@
 
     <figure class="figure">
       <h3>Spring is conference season</h3>
-      <p class="note">Each square is one month; darker means more visitors. September to November is the busiest time, while December and January are quiet. The empty band in 2020–21 is the border closure. Switch to compare with business visitors.</p>
+      <p class="note">Each square compares one month with an average month in the same year, so growth over time does not hide the pattern. <strong>Purple</strong> means busier than usual, <strong>orange</strong> means quieter. Year after year, September to November is busiest while December and January are quiet. The colour scale stays the same when you switch to business visitors, so the two can be compared. Grey years (2020–22, and the part-year 2026) are not compared.</p>
       <div id="c4" class="chart"></div>
       <p class="source">Source: Australian Bureau of Statistics, Overseas Arrivals and Departures, Jan 1991 – Jul 2026.</p>
     </figure>
@@ -142,7 +143,7 @@
       <h3>Switch the measure and the map changes</h3>
       <p class="note">Top 10 home countries of international business event visitors in 2025. Line width shows the selected measure. By <strong>visitors</strong>, New Zealand leads with 165,000. By <strong>nights stayed</strong> and <strong>spend</strong>, China leads, and India and the UK move up.</p>
       <div id="c6" class="chart"></div>
-      <p class="source">Source: Tourism Research Australia, Business events data (IVS), International page, Jan–Dec 2025. Map: Natural Earth via vega-datasets. Lines join each country's capital to the centre of Australia.</p>
+      <p class="source">Source: Tourism Research Australia, Business events data (IVS), International page, Jan–Dec 2025. Map: Natural Earth via vega-datasets (world-110m), stored in data/. Lines join each country's capital to the centre of Australia.</p>
     </figure>
   </section>
 
@@ -194,7 +195,7 @@
             <div class="big">14th</div>
             <p>Australia's world ranking in 2025, up from 17th in 2024 but below 12th in 2019.</p>
           </div>
-          <p class="note" style="margin-top:14px">Higher on the chart is better. Sydney has been Australia's top city every year. In 2025 Brisbane jumped from 94th to 49th, while Melbourne fell from 31st to 58th. Hover over a line to highlight a city.</p>
+          <p class="note" style="margin-top:14px">Each line shows where a city sits among the six; the number in each circle is its world rank. Sydney has been Australia's top city every year. In 2025 Brisbane overtook Melbourne, jumping from 94th to 49th in the world, while Melbourne fell from 31st to 58th. Hover over a line to highlight a city.</p>
         </div>
       </div>
       <p class="source">Source: ICCA Country &amp; City Rankings 2019 and 2022; micenet reports on the ICCA 2023, 2024 and 2025 rankings. No rankings were found for 2020 and 2021.</p>
@@ -227,22 +228,22 @@
     </div>
 
     <h3>Visualisation idioms (Munzner's What / Why / How)</h3>
-    <table class="idioms">
+    <div class="table-scroll"><table class="idioms">
       <thead><tr><th>Chart</th><th>What (data)</th><th>Why (task)</th><th>How (marks, channels, interaction)</th></tr></thead>
       <tbody>
         <tr><td>Waffle chart</td><td>3 categories, spend ($m)</td><td>Show part-to-whole</td><td>Square marks; count of squares; colour hue = traveller type</td></tr>
         <tr><td>Bar chart</td><td>3 categories, average spend</td><td>Compare values</td><td>Bar length; colour hue</td></tr>
         <tr><td>Treemap</td><td>Spend items grouped into 4 themes</td><td>Part-to-whole, find the largest items</td><td>Rectangle area = spend; hue = theme; radio filter by traveller type</td></tr>
         <tr><td>Line chart, overview + detail</td><td>Monthly time series, 1991–2026</td><td>Discover trends, locate shocks</td><td>Line position; annotated event rules; brush to zoom; hover tooltip</td></tr>
-        <tr><td>Calendar heatmap</td><td>Year × month, arrivals</td><td>Find seasonal patterns</td><td>Cell marks; colour luminance; radio filter by reason</td></tr>
+        <tr><td>Calendar heatmap</td><td>Year × month, arrivals as % of that year's average month</td><td>Find seasonal patterns</td><td>Cell marks; diverging colour (fixed scale, same for both reasons); radio filter by reason</td></tr>
         <tr><td>Slope chart</td><td>7 reasons × 2 years (index)</td><td>Compare change</td><td>Line slope and position; hue highlights conference and business</td></tr>
         <tr><td>Flow map</td><td>Origin–destination links, 10 countries</td><td>Locate origins, compare volumes</td><td>Line width and circle area; Equal Earth projection; radio to switch measure</td></tr>
         <tr><td>Choropleth map</td><td>8 states, % share of spend</td><td>Compare regions</td><td>Area marks; colour luminance; conic equal-area projection</td></tr>
         <tr><td>Proportional symbol map</td><td>9 cities, spend / visitors</td><td>Compare magnitude by place</td><td>Circle area at city location; radio to switch measure</td></tr>
         <tr><td>Mosaic (Marimekko) chart</td><td>8 states × 3 traveller types, spend</td><td>Part-to-whole within and across states</td><td>Rectangle width and height; colour hue</td></tr>
-        <tr><td>Bump chart</td><td>World rank of 6 cities over 5 years</td><td>Track rank changes</td><td>Line position (log scale); hue per city; hover highlight</td></tr>
+        <tr><td>Bump chart</td><td>Rank of 6 cities among themselves over 5 years (world rank as labels)</td><td>Track rank changes</td><td>Vertical position = rank; hue per city; world rank in circles; hover highlight</td></tr>
       </tbody>
-    </table>
+    </table></div>
 
     <h3>Notes on the data</h3>
     <ul>
@@ -284,7 +285,7 @@
 
 <footer>
   <div class="wrap">
-    Created by <strong>KEVIN SAPUTRA</strong> for FIT3179 Data Visualisation, October 2026. Built with Vega-Lite, Vega and Vega-Embed.
+    Created by <strong>Kevin Saputra</strong> for FIT3179 Data Visualisation, October 2026. Built with Vega-Lite, Vega and Vega-Embed.
   </div>
 </footer>
 
